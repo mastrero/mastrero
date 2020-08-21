@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+Crawl-delay: 120
+User-agent: *
+Disallow:
