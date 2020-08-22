@@ -12,7 +12,7 @@ const darkTheme = {
 };
 
 const useTheme = () => {
-	const [theme, setTheme] = useState(darkTheme);
+	const [theme, setTheme] = useState(lightTheme);
 
 	const toggleTheme = () => {
 		setTheme(theme.type === "light" ? darkTheme : lightTheme);

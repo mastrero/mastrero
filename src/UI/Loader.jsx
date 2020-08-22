@@ -12,8 +12,8 @@ const progress = keyframes`
 `;
 
 const background = keyframes`
-	0% {
-		background-color: #ffffff;
+	30% {
+		background-color: #e5e5e533;
 	}
 	90% {
 		background-color: #e5e5e5;

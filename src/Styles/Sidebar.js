@@ -32,8 +32,24 @@ export const NavListItem = styled.a`
 	cursor: pointer;
 	text-decoration: none;
 	position: relative;
-	&:hover,
-	&:active {
+	transition: all 0.5s linear;
+	-webkit-tap-highlight-color: transparent;
+	&:before {
+		content: "";
+		display: block;
+		width: 0;
+		height: 3px;
+		background-color: ${(props) => props.theme.font};
+		position: absolute;
+		top: 50%;
+		left: 0%;
+		transition: all 0.5s linear;
+	}
+	&.active {
+		padding-left: 35px;
+	}
+	&.active&:before {
+		width: 10%;
 	}
 	&:after {
 		content: "";
@@ -43,12 +59,18 @@ export const NavListItem = styled.a`
 		height: 25px;
 		background-image: url(${(props) => props.icon});
 		background-size: 25px 25px;
+		transition: all 0.5s linear;
+	}
+	&.active&:after {
+		width: 30px;
+		height: 30px;
+		background-size: 30px 30px;
 	}
 `;
 
 export const Themer = styled.div`
 	font-size: 20px;
-	margin-top: 35px;
+	margin: 35px 0 0 35px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

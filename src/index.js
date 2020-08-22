@@ -13,7 +13,6 @@ const App = lazy(() =>
 ReactDOM.render(
 	<React.StrictMode>
 		<Suspense fallback={<Loader />}>
-			{/* <Loader /> */}
 			<App />
 		</Suspense>
 	</React.StrictMode>,
