@@ -3,6 +3,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 	font-family: "Montserrat", "Helvetica", sans-serif;
@@ -15,10 +16,5 @@ body {
 
 #root {
 	display: flex;
-}
-
-@media screen and (max-width: 768px) {
-	#root {
-		height: 100vh;
-	}
+	height: 100vh;
 }

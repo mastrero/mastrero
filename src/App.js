@@ -1,31 +1,38 @@
-import React from "react";
-
-import useTheme from "./UI/Theme";
+import React, { useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Sidebar from "./Components/Sidebar";
-import { About } from "./Components/Main";
+import * as Components from "./Components";
+import useTheme from "./UI/Theme";
+import { links } from "./utils";
+
+const Section = styled.section`
+	height: 100%;
+	background-color: ${(props) => props.theme.bg};
+	position: relative;
+	@media screen and (max-width: 768px) {
+		padding-left: 40px;
+		height: ${() => window.innerHeight}px;
+	}
+`;
+
+const Main = styled.main`
+	width: 100%;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+`;
 
 function App() {
 	const [theme, toggleTheme] = useTheme();
-
-	const Main = styled.main`
-		width: 100%;
-		overflow-y: scroll;
-		scroll-behavior: smooth;
-		/* REMOVE LATER*/
-		> section {
-			height: 100%;
-		}
-	`;
+	const mainRef = useRef(null);
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Sidebar toggleTheme={toggleTheme} />
-			<Main>
-				<About />
-				<section id='work'>Work</section>
-				<section id='contact'>Contact</section>
-				<section id='resume'>Resume</section>
+			<Components.Sidebar toggleTheme={toggleTheme} mainRef={mainRef} />
+			<Main ref={mainRef}>
+				{links.map(({ href, name }, index) => (
+					<Section id={href} key={href + index}>
+						{Components[name]()}
+					</Section>
+				))}
 			</Main>
 		</ThemeProvider>
 	);

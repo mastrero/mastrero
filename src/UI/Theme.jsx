@@ -3,7 +3,7 @@ import { useState } from "react";
 const lightTheme = {
 	type: "light",
 	font: "#000000",
-	bg: "#e5e5e5",
+	bg: "#ffffff",
 };
 const darkTheme = {
 	text: "dark",
