@@ -6,9 +6,7 @@ import "./index.css";
 
 const App = lazy(() =>
 	Promise.all([import("./App"), new Promise((resolve) => setTimeout(resolve, 1800))]).then(([moduleExports]) => moduleExports)
-);
-
-// import App from "./App";
+); // 1800 Dalay for displaying loading animation
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -19,4 +17,4 @@ ReactDOM.render(
 	document.getElementById("root")
 );
 
-serviceWorker.register();
+serviceWorker.unregister();

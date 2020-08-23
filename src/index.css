@@ -3,6 +3,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 	font-family: "Montserrat", "Helvetica", sans-serif;
@@ -13,22 +14,7 @@ body {
 	user-select: none;
 }
 
-.view {
+#root {
 	display: flex;
-}
-
-main {
-	width: 100%;
-	overflow-y: scroll;
-	scroll-behavior: smooth;
-}
-
-main section {
-	height: 100%;
-}
-
-@media screen and (max-width: 768px) {
-	.view {
-		height: 100vh;
-	}
+	height: 100vh;
 }

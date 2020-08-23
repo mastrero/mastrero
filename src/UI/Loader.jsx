@@ -11,25 +11,15 @@ const progress = keyframes`
 	}
 `;
 
-const background = keyframes`
-	30% {
-		background-color: #e5e5e533;
-	}
-	90% {
-		background-color: #e5e5e5;
-	}
-`;
-
 const Div = styled.div`
 	position: relative;
 	width: 100vw;
 	height: 100vh;
 	z-index: 90;
-	background-color: #c7c7c7;
+	background-color: #ffffff;
 	text-align: center;
 	display: grid;
 	place-items: center;
-	animation: ${background} 1.5s linear;
 `;
 
 const LoadingWrapper = styled.div`

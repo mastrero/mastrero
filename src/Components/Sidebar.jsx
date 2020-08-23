@@ -1,72 +1,61 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import Backdrop from "../UI/Backdrop";
-import { Container, NavList, NavListItem, Themer, ThemeIcon, NavMenu } from "../Styles/Sidebar";
-import * as Images from "../Assets";
+import { Container, NavList, NavListItem, NavMenu, Themer, ThemeIcon } from "../Styles/Sidebar";
+import { links } from "../utils";
 
-export default function (props) {
+export default function ({ mainRef, toggleTheme }) {
 	const [menu, showMenu] = useState(false);
-	const links = [
-		{
-			name: "About",
-			href: "about",
-			icon: Images.About,
-		},
-		{
-			name: "Work",
-			href: "work",
-			icon: Images.Work,
-		},
-		{
-			name: "Contact",
-			href: "contact",
-			icon: Images.Contact,
-		},
-		{
-			name: "Resume",
-			href: "resume",
-			icon: Images.Resume,
-		},
-	];
+	const navRef = useRef(null);
+
+	const handlers = {
+		checkScrolling: useCallback(() => {
+			let sections = mainRef.current.children;
+			let navItems = navRef.current.children;
+			let current_position = +mainRef.current.scrollTop + 5; // +5 for last section visibility
+			let activeSectionId = Object.keys(sections)
+				.map((key) => (sections[key].offsetTop <= current_position ? sections[key] : null))
+				.filter((item) => item)
+				.pop().id;
+			Object.values(navItems).map(({ rel, classList }) =>
+				rel === activeSectionId ? classList.add("active") : classList.remove("active")
+			);
+		}, [mainRef]),
+
+		scrollToSection: useCallback((href) => {
+			document.getElementById(href).scrollIntoView(true);
+			setTimeout(() => {
+				showMenu(false);
+			}, 1500);
+		}, []),
+	};
 
 	useEffect(() => {
-		let main = document.getElementsByTagName("main")[0];
-		let sections = main.children;
-		let navItems = document.getElementById("navigation").children;
-		main.addEventListener("scroll", () => {
-			let current_position = main.scrollTop;
-			let activeSection = Object.keys(sections)
-				.map((key) => (sections[key].offsetTop <= current_position ? sections[key] : null))
-				.filter((item) => item);
-			activeSection = activeSection[activeSection.length - 1];
-			Object.values(navItems).map((navItem) =>
-				navItem.rel === activeSection.id ? navItem.classList.add("active") : navItem.classList.remove("active")
-			);
+		mainRef.current.addEventListener("scroll", () => {
+			handlers.checkScrolling();
 		});
-		return () => {
-			main.removeEventListener();
+		return (mainRef) => {
+			// mainRef.current.removeEventListener("scroll", () => {});
+			handlers.checkScrolling();
 		};
-	}, []);
+	}, [handlers, mainRef]);
 
 	return (
 		<React.Fragment>
 			<Container show={menu}>
 				<NavMenu show={menu} onClick={() => showMenu(!menu)} />
-				<NavList id='navigation'>
+				<NavList ref={navRef}>
 					{links.map(({ href, icon, name }, index) => (
 						<NavListItem
-							key={index}
 							className={!index && "active"}
+							key={index}
 							rel={href}
-							onClick={() => {
-								document.getElementById(href).scrollIntoView(true);
-								showMenu(false);
-							}}
+							onClick={() => handlers.scrollToSection(href)}
 							icon={icon}>
 							{name}
 						</NavListItem>
 					))}
 				</NavList>
-				<Themer onClick={props.toggleTheme}>
+				<Themer onClick={toggleTheme}>
 					Theme <ThemeIcon />
 				</Themer>
 			</Container>
