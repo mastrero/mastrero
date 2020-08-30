@@ -66,9 +66,6 @@ export const Image = styled.img`
 	position: absolute;
 	bottom: 0;
 	z-index: 10;
-	@media screen and (max-width: 768px) {
-		// bottom: 35px;
-	}
 `;
 
 export const Content = styled.div`
@@ -80,7 +77,7 @@ export const Content = styled.div`
 	> h1 {
 		animation: ${fadeDown} 0.85s ease-out 0s 1;
 	}
-	> h3 {
+	> h2 {
 		animation: ${slideLeft} 0.5s ease-out 0s 1;
 	}
 	> p {

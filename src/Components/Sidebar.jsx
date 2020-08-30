@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import Backdrop from "../UI/Backdrop";
 import { Container, NavList, NavListItem, NavMenu, Themer, ThemeIcon } from "../Styles/Sidebar";
 import { links } from "../utils";
+import * as Images from "../Assets";
 
 export default function ({ mainRef, toggleTheme }) {
 	const [menu, showMenu] = useState(false);
@@ -11,9 +12,8 @@ export default function ({ mainRef, toggleTheme }) {
 		checkScrolling: useCallback(() => {
 			let sections = mainRef.current.children;
 			let navItems = navRef.current.children;
-			let current_position = +mainRef.current.scrollTop + 5; // +5 for last section visibility
 			let activeSectionId = Object.keys(sections)
-				.map((key) => (sections[key].offsetTop <= current_position ? sections[key] : null))
+				.map((key) => (sections[key].offsetTop <= +mainRef.current.scrollTop + 5 ? sections[key] : null))
 				.filter((item) => item)
 				.pop().id;
 			Object.values(navItems).map(({ rel, classList }) =>
@@ -27,6 +27,10 @@ export default function ({ mainRef, toggleTheme }) {
 				showMenu(false);
 			}, 1500);
 		}, []),
+
+		menuHandler: useCallback(() => {
+			showMenu(!menu);
+		}, [menu]),
 	};
 
 	useEffect(() => {
@@ -42,16 +46,18 @@ export default function ({ mainRef, toggleTheme }) {
 	return (
 		<React.Fragment>
 			<Container show={menu}>
-				<NavMenu show={menu} onClick={() => showMenu(!menu)} />
+				<div onClick={handlers.menuHandler} style={{ cursor: "pointer", height: 20 }}>
+					<NavMenu show={menu} />
+				</div>
 				<NavList ref={navRef}>
-					{links.map(({ href, icon, name }, index) => (
+					{links.map((link, index) => (
 						<NavListItem
 							className={!index && "active"}
-							key={index}
-							rel={href}
-							onClick={() => handlers.scrollToSection(href)}
-							icon={icon}>
-							{name}
+							key={link}
+							rel={link}
+							onClick={() => handlers.scrollToSection(link)}
+							icon={Images[link]}>
+							{link}
 						</NavListItem>
 					))}
 				</NavList>
@@ -59,7 +65,7 @@ export default function ({ mainRef, toggleTheme }) {
 					Theme <ThemeIcon />
 				</Themer>
 			</Container>
-			{menu && <Backdrop onClick={() => showMenu(!menu)} />}
+			{menu && <Backdrop onClick={handlers.menuHandler} />}
 		</React.Fragment>
 	);
 }
