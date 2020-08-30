@@ -5,12 +5,15 @@ import useTheme from "./UI/Theme";
 import { links } from "./utils";
 
 const Section = styled.section`
-	height: 100%;
+	min-height: 100%;
 	background-color: ${(props) => props.theme.bg};
+	transition: all 0.3s linear;
 	position: relative;
 	@media screen and (max-width: 768px) {
 		padding-left: 40px;
-		height: ${() => window.innerHeight}px;
+		:first-child {
+			height: ${() => window.innerHeight}px;
+		}
 	}
 `;
 
@@ -18,6 +21,7 @@ const Main = styled.main`
 	width: 100%;
 	overflow-y: scroll;
 	scroll-behavior: smooth;
+	transition: all 0.3s linear;
 `;
 
 function App() {
@@ -28,9 +32,9 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<Components.Sidebar toggleTheme={toggleTheme} mainRef={mainRef} />
 			<Main ref={mainRef}>
-				{links.map(({ href, name }, index) => (
-					<Section id={href} key={href + index}>
-						{Components[name]()}
+				{links.map((link, index) => (
+					<Section id={link} key={link + index}>
+						{Components[link]()}
 					</Section>
 				))}
 			</Main>
