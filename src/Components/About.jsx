@@ -1,19 +1,30 @@
 import React, { Fragment } from "react";
-import { Content, Buttons, Button, Image } from "../Styles/About";
-import { BottomImage } from "../Assets";
+import { Content, Button, Details, DetailsItem } from "../Styles/About";
+import { aboutContent, aboutDetails } from "../utils";
 
 export default function About() {
 	return (
 		<Fragment>
 			<Content>
 				<h1>Hey there,</h1>
-				<h2>I'm ArunKumar Nadikattu</h2>
-				<p>A enthusiastic web developer, focused on the design and development of digital products.</p>
+				<h2>{aboutContent.name}</h2>
+				<p>{aboutContent.description}</p>
 			</Content>
-			<Buttons>
-				<Button onClick={() => document.getElementById("Contact").scrollIntoView(true)}>GET IN TOUCH</Button>
-			</Buttons>
-			<Image src={BottomImage} alt='Me' />
+			<Button onClick={() => document.getElementById("Contact").scrollIntoView(true)}>GET IN TOUCH</Button>
+			<AboutME />
 		</Fragment>
+	);
+}
+
+function AboutME() {
+	return (
+		<Details>
+			{aboutDetails.map((details, index) => (
+				<DetailsItem key={index}>
+					<h2>{details.head}</h2>
+					<p>{details.para}</p>
+				</DetailsItem>
+			))}
+		</Details>
 	);
 }

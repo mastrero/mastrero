@@ -9,8 +9,9 @@ const Section = styled.section`
 	background-color: ${(props) => props.theme.bg};
 	transition: all 0.3s linear;
 	position: relative;
+	border-bottom: 2px solid black;
 	@media screen and (max-width: 768px) {
-		padding-left: 40px;
+		margin-left: 40px;
 		:first-child {
 			height: ${() => window.innerHeight}px;
 		}

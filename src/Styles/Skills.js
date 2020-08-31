@@ -3,34 +3,41 @@ import styled from "styled-components";
 // KEYFRAMES
 
 // STYLES
-export const SkillsWrapper = styled.div`
-	padding-left: 35px;
+export const Wrapper = styled.div`
+	padding-left: 50px;
+	@media screen and (max-width: 768px) {
+		padding-left: 10px;
+	}
 	> h1 {
 		font-weight: 500;
 		color: ${(props) => props.theme.font};
 	}
 `;
 
-export const SkillsFlex = styled.div`
-	width: 100%;
+export const Flex = styled.div`
+	width: 97%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
 	@media screen and (max-width: 768px) {
-		width: 80%;
-		justify-content: center;
+		justify-content: space-around;
+		width: 100%;
 	}
-	div:nth-last-child(-n + 3):before {
-		display: none;
+	div:nth-last-child(-n + 6) {
+		border: none;
+		margin: 0 10px;
+		&:before {
+			display: none;
+		}
 	}
 `;
 
-export const SkillBox = styled.div`
-	width: 130px;
+export const Box = styled.div`
+	width: 135px;
 	height: 100%;
 	margin: 10px;
-	padding: 0 10px;
+	padding: 0 5px;
 	background-color: ${(props) => props.theme.bg};
 	color: ${(props) => props.theme.font};
 	align-self: center;
@@ -41,6 +48,7 @@ export const SkillBox = styled.div`
 	transition: all 0.15s linear;
 	box-shadow: 0px 0px 7px 0px rgb(204 204 204);
 	position: relative;
+	cursor: pointer;
 	&:before {
 		content: "";
 		position: absolute;
@@ -61,5 +69,14 @@ export const SkillBox = styled.div`
 		top: -3px;
 		right: -3px;
 		border-top: 15px solid red;
+	}
+	> img {
+		width: 40px;
+		height: 40px;
+	}
+	> p {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 `;

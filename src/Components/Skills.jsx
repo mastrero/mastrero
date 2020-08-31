@@ -1,29 +1,41 @@
 import React, { Fragment } from "react";
-import { skills } from "../utils";
-import { SkillsWrapper, SkillsFlex, SkillBox } from "../Styles/Skills";
+import { Wrapper, Flex, Box } from "../Styles/Skills";
 import * as Images from "../Assets";
+import { know, tools, learning } from "../utils";
+
+const searchLink = "https://duckduckgo.com/?q=";
 
 export default function Skills() {
 	return (
 		<Fragment>
-			<SkillsWrapper>
-				<h1>Skills</h1>
-				<SkillsFlex>
-					{skills.map((skill, index) => (
-						<SkillBox key={skill + index}>
-							<img src={Images[skill]} alt={skill} width='40px' height='40px' />
-							<p>{skill}</p>
-						</SkillBox>
-					))}
-					<SkillBox style={{ border: "none", margin: "0 10px" }} />
-					<SkillBox style={{ border: "none", margin: "0 10px" }} />
-					<SkillBox style={{ border: "none", margin: "0 10px" }} />
-				</SkillsFlex>
-			</SkillsWrapper>
-
-			<div>
-				<h1>Interests</h1>
-			</div>
+			<Wrapper>
+				<h1>What I know</h1>
+				<PouplateItems items={know} />
+			</Wrapper>
+			<Wrapper>
+				<h1>I'm currently learning</h1>
+				<PouplateItems items={learning} />
+			</Wrapper>
+			<Wrapper>
+				<h1>Tools I use</h1>
+				<PouplateItems items={tools} />
+			</Wrapper>
 		</Fragment>
 	);
 }
+
+const PouplateItems = ({ items, width }) => (
+	<Flex>
+		{items.map((item, index) => (
+			<Box key={item + index} onClick={() => window.open(`${searchLink}${item}`, "_blank")}>
+				<p>{item}</p>
+				<img src={Images[item.replace(/ /g, "")]} alt={item} />
+			</Box>
+		))}
+		{Array(6)
+			.fill()
+			.map((index) => (
+				<Box key={index} />
+			))}
+	</Flex>
+);

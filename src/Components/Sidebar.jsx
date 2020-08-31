@@ -49,18 +49,7 @@ export default function ({ mainRef, toggleTheme }) {
 				<div onClick={handlers.menuHandler} style={{ cursor: "pointer", height: 20 }}>
 					<NavMenu show={menu} />
 				</div>
-				<NavList ref={navRef}>
-					{links.map((link, index) => (
-						<NavListItem
-							className={!index && "active"}
-							key={link}
-							rel={link}
-							onClick={() => handlers.scrollToSection(link)}
-							icon={Images[link]}>
-							{link}
-						</NavListItem>
-					))}
-				</NavList>
+				<NavListElement scroll={handlers.scrollToSection} reference={navRef} />
 				<Themer onClick={toggleTheme}>
 					Theme <ThemeIcon />
 				</Themer>
@@ -69,3 +58,13 @@ export default function ({ mainRef, toggleTheme }) {
 		</React.Fragment>
 	);
 }
+
+const NavListElement = ({ reference, scroll }) => (
+	<NavList ref={reference}>
+		{links.map((link, index) => (
+			<NavListItem className={!index && "active"} key={link} rel={link} onClick={() => scroll(link)} icon={Images[link]}>
+				{link}
+			</NavListItem>
+		))}
+	</NavList>
+);

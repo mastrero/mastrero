@@ -23,29 +23,18 @@ const slideLeft = keyframes`
 `;
 
 // Styles
-export const Buttons = styled.div`
-	width: 16vw;
-	margin: 0 auto;
-	margin-top: 20px;
-	@media screen and (max-width: 768px) {
-		width: 50%;
-	}
-`;
 export const Button = styled.button`
-	width: 100%;
-	height: 100%;
-	min-width: 180px;
-	padding: 15px 0;
+	width: 190px;
+	padding: 8px 0;
+	margin-left: 50px;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 20px;
 	font-family: "Segoe UI";
-	position: relative;
 	z-index: 15;
 	background-color: ${(props) => props.theme.font};
 	color: ${(props) => props.theme.bg};
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	outline: none;
 	border: none;
 	border-radius: 5px;
@@ -55,7 +44,7 @@ export const Button = styled.button`
 		0 63.1px 85.1px -15px rgba(0, 0, 0, 0.236), 0 126px 170px -15px rgba(0, 0, 0, 0.31);
 	&:after {
 		content: "→";
-		transform: translateX(3px);
+		transform: translateX(5px);
 	}
 	&:hover&:after {
 		transform: translateX(15px);
@@ -65,22 +54,83 @@ export const Button = styled.button`
 export const Image = styled.img`
 	position: absolute;
 	bottom: 0;
-	z-index: 10;
+	z-index: 5;
 `;
 
 export const Content = styled.div`
-	padding: 16vh 0 0 50px;
+	padding: 10vh 0 0 50px;
 	color: ${(props) => props.theme.font};
 	@media screen and (max-width: 768px) {
-		padding: 25% 0 0 10px;
+		padding: 8vh 0 0 10px;
 	}
 	> h1 {
 		animation: ${fadeDown} 0.85s ease-out 0s 1;
 	}
 	> h2 {
 		animation: ${slideLeft} 0.5s ease-out 0s 1;
+		font-weight: 500;
+		margin: 0;
 	}
 	> p {
 		animation: ${slideLeft} 0.68s ease-out 0s 1;
+		margin: 0 0 10px 0;
+	}
+`;
+
+export const Details = styled.section`
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: center;
+	position: absolute;
+	bottom: 0px;
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
+`;
+
+export const DetailsItem = styled.article`
+	padding: 0.5rem 1rem;
+	flex: 1 1 250px;
+	opacity: 0.8;
+	position: relative;
+	border-top: 3px solid ${(props) => props.theme.font + "55"};
+	transition: all 0.3s linear;
+	color: ${(props) => props.theme.font};
+	&:after {
+		content: "";
+		position: absolute;
+		top: -4px;
+		left: 0;
+		height: 0px;
+		width: 0%;
+		background: ${(props) => props.theme.font};
+		transition: all 0.15s linear;
+	}
+	&:before {
+	}
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
+	&:hover::after,
+	&:focus::after {
+		height: 4px;
+		width: 100%;
+	}
+	> h2 {
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+		font-size: 1em;
+		margin: 8px 0;
+	}
+	> p {
+		line-height: 1.3;
+		margin: 0;
+		text-align: justify;
+	}
+	@media screen and (max-width: 768px) {
+		padding: 0.3rem 0.6rem;
 	}
 `;
