@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
-export const Container = styled.header`
+export const Container = styled.aside`
 	width: 20vw;
 	min-width: 300px;
 	height: 100vh;
 	background-color: ${(props) => props.theme.bg};
 	color: ${(props) => props.theme.font};
 	box-shadow: -1px 0px 20px 0px rgb(160 160 160 / 62%);
-	transition: all 0.3s linear;
+	transition: position 0.3s linear;
 	position: sticky;
 	z-index: 30;
 	top: 0;
+	overflow-y: auto;
 	@media screen and (max-width: 768px) {
 		transform: ${(props) => (props.show ? `translateX(0%)` : `translateX(-88%)`)};
 		transition: all 0.3s linear;
@@ -21,13 +22,13 @@ export const Container = styled.header`
 
 export const NavList = styled.nav`
 	margin: 0 auto;
-	padding: 30px 0 0 35px;
+	padding: 0 0 0 35px;
 	display: flex;
 	flex-direction: column;
 `;
 export const NavListItem = styled.a`
 	color: ${(props) => props.theme.font};
-	margin-top: 35px;
+	margin-top: 25px;
 	font-size: 20px;
 	cursor: pointer;
 	text-decoration: none;
@@ -36,20 +37,20 @@ export const NavListItem = styled.a`
 	-webkit-tap-highlight-color: transparent;
 	&:before {
 		content: "";
-		display: block;
-		width: 0;
-		height: 3px;
-		background-color: ${(props) => props.theme.font};
 		position: absolute;
-		top: 50%;
-		left: 0%;
-		transition: all 0.5s linear;
+		top: 28px;
+		width: 25%;
+		height: 2px;
+		background: none;
+		transition: all 0.2s linear;
 	}
 	&.active {
-		padding-left: 35px;
+		position: relative;
+		font-weight: 500;
 	}
 	&.active&:before {
-		width: 10%;
+		background-color: ${(props) => props.theme.font};
+		width: 100%;
 	}
 	&:after {
 		content: "";
@@ -59,7 +60,7 @@ export const NavListItem = styled.a`
 		height: 25px;
 		background-image: url(${(props) => props.icon});
 		background-size: 25px 25px;
-		transition: all 0.5s linear;
+		transition: all 0.2s linear;
 	}
 	&.active&:after {
 		width: 30px;
@@ -87,15 +88,16 @@ export const ThemeIcon = styled.div`
 	transition: all 0.3s linear;
 `;
 
-export const NavMenu = styled.div`
+export const NavMenu = styled.a`
 	&,
 	&:after,
 	&:before {
 		width: 25px;
 		height: 3px;
 		background-color: ${(props) => props.theme.font};
-		transition: all 0.2s linear;
+		transition: all 0.3s linear;
 		z-index: 35;
+		cursor: pointer;
 	}
 	&:after,
 	&:before {
@@ -121,6 +123,7 @@ export const NavMenu = styled.div`
 		}
 		&:after {
 			opacity: 0;
+			background: none;
 		}
 		&:before {
 			transform: rotate(90deg);
