@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom";
 import Loader from "./UI/Loader";
-import "./index.css";
+import { GlobalStyle } from "./globalstyles";
 
 console.log(
 	"%cStop ✋! This is a browser feature intended for developers only.",
@@ -16,6 +16,7 @@ const root = document.getElementById("root");
 const rootElement = (
 	<React.StrictMode>
 		<Suspense fallback={<Loader />}>
+			<GlobalStyle />
 			<App />
 		</Suspense>
 	</React.StrictMode>

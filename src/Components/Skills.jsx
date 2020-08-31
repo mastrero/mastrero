@@ -32,10 +32,8 @@ const PouplateItems = ({ items, width }) => (
 				<img src={Images[item.replace(/ /g, "")]} alt={item} />
 			</Box>
 		))}
-		{Array(6)
-			.fill()
-			.map((index) => (
-				<Box key={index} />
-			))}
+		{new Array(6).fill().map(() => (
+			<Box key={Math.random()} />
+		))}
 	</Flex>
 );
