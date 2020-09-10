@@ -1,19 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.aside`
-	width: 20vw;
-	min-width: 300px;
+	min-width: 220px;
 	height: 100vh;
 	background-color: ${(props) => props.theme.bg};
 	color: ${(props) => props.theme.font};
 	box-shadow: -1px 0px 20px 0px rgb(160 160 160 / 62%);
 	transition: position 0.3s linear;
-	position: sticky;
+	// position: sticky;
 	z-index: 30;
 	top: 0;
 	overflow-y: auto;
 	@media screen and (max-width: 768px) {
-		transform: ${(props) => (props.show ? `translateX(0%)` : `translateX(-88%)`)};
+		transform: ${(props) => (props.show ? `translateX(0%)` : `translateX(-85%)`)};
 		transition: all 0.3s linear;
 		box-shadow: 2px -1px 2px 0px rgb(160 160 160 / 62%);
 		position: fixed;
@@ -21,51 +20,35 @@ export const Container = styled.aside`
 `;
 
 export const NavList = styled.nav`
-	margin: 0 auto;
-	padding: 0 0 0 35px;
+	padding: 0 5px;
 	display: flex;
 	flex-direction: column;
+	@media screen and (max-width: 768px) {
+		padding-right: 0;
+	}
 `;
 export const NavListItem = styled.a`
 	color: ${(props) => props.theme.font};
-	margin-top: 25px;
-	font-size: 20px;
+	margin-top: 10px;
+	padding: 5px 5px;
+	display: flex;
+	justify-content: space-between;
 	cursor: pointer;
 	text-decoration: none;
-	position: relative;
-	transition: all 0.5s linear;
 	-webkit-tap-highlight-color: transparent;
-	&:before {
-		content: "";
-		position: absolute;
-		top: 28px;
-		width: 25%;
-		height: 2px;
-		background: none;
-		transition: all 0.2s linear;
-	}
+
+	&:hover,
 	&.active {
-		position: relative;
-		font-weight: 500;
+		background: #989898;
+		color: ${(props) => props.theme.bg};
+		border-radius: 0;
 	}
-	&.active&:before {
-		background-color: ${(props) => props.theme.font};
-		width: 100%;
+	> span {
+		font-size: 1.05rem;
 	}
-	&:after {
-		content: "";
-		position: absolute;
-		right: 3px;
+	> img {
 		width: 25px;
 		height: 25px;
-		background-image: url(${(props) => props.icon});
-		background-size: 25px 25px;
-		transition: all 0.2s linear;
-	}
-	&.active&:after {
-		width: 30px;
-		height: 30px;
-		background-size: 30px 30px;
 	}
 `;
 
@@ -80,10 +63,6 @@ export const Themer = styled.div`
 export const ThemeIcon = styled.div`
 	width: 30px;
 	height: 30px;
-	background-image: url(${(props) =>
-		props.theme.type === "light"
-			? "https://img.icons8.com/color/48/000000/sun.png"
-			: "https://img.icons8.com/plasticine/50/000000/crescent-moon.png"});
 	background-size: 30px 30px;
 	transition: all 0.3s linear;
 `;
@@ -107,7 +86,7 @@ export const NavMenu = styled.a`
 	& {
 		position: absolute;
 		top: 15px;
-		left: 269px;
+		left: 191px;
 	}
 	&:after {
 		top: 8px;

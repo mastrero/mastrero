@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
 import * as Components from "./Components";
 import useTheme from "./UI/Theme";
@@ -8,16 +8,25 @@ import { Main, Section } from "./globalstyles";
 export default function App() {
 	const [theme, toggleTheme] = useTheme();
 	const mainRef = useRef(null);
+
 	return (
 		<ThemeProvider theme={theme}>
-			<Components.Sidebar toggleTheme={toggleTheme} mainRef={mainRef} />
+			<Suspense fallback={""}>
+				<Components.Sidebar toggleTheme={toggleTheme} mainRef={mainRef} />
+			</Suspense>
 			<Main ref={mainRef}>
-				{links.map((link, index) => (
-					<Section id={link} key={link + index}>
-						{Components[link]()}
-					</Section>
-				))}
+				<Sections />
 			</Main>
 		</ThemeProvider>
 	);
 }
+
+const Sections = () => {
+	let sections = links.map((link) => (
+		<Section id={link} key={link}>
+			{Components[link]()}
+		</Section>
+	));
+
+	return sections;
+};

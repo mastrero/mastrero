@@ -3,8 +3,6 @@ import { Wrapper, Flex, Box } from "../Styles/Skills";
 import * as Images from "../Assets";
 import { know, tools, learning } from "../utils";
 
-const searchLink = "https://duckduckgo.com/?q=";
-
 export default function Skills() {
 	return (
 		<Fragment>
@@ -24,16 +22,13 @@ export default function Skills() {
 	);
 }
 
-const PouplateItems = ({ items, width }) => (
+const PouplateItems = ({ items }) => (
 	<Flex>
 		{items.map((item, index) => (
-			<Box key={item + index} onClick={() => window.open(`${searchLink}${item}`, "_blank")}>
-				<p>{item}</p>
-				<img src={Images[item.replace(/ /g, "")]} alt={item} />
+			<Box key={item + index}>
+				<span>{item}</span>
+				<img src={Images[item.replace(/ /g, "")]} alt={item} loading='lazy' />
 			</Box>
-		))}
-		{new Array(6).fill().map(() => (
-			<Box key={Math.random()} />
 		))}
 	</Flex>
 );

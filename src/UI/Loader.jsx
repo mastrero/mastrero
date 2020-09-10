@@ -39,7 +39,7 @@ export default function Loader() {
 	return (
 		<Div>
 			<div>
-				<img src={Coffee} alt='Coffee' />
+				<img src={Coffee} alt='Coffee' style={{ width: 37, height: 48 }} />
 				<LoadingWrapper>
 					<Loading />
 					Brewing Coffee

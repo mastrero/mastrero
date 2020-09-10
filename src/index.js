@@ -1,24 +1,20 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import Loader from "./UI/Loader";
+// import Loader from "./UI/Loader";
 import { GlobalStyle } from "./globalstyles";
+import App from "./App";
 
-console.log(
-	"%cStop ✋! This is a browser feature intended for developers only.",
-	"color: #ffffff; font-size: 3em; font-weight: bolder;"
-);
-
-const App = lazy(() =>
-	Promise.all([import("./App"), new Promise((resolve) => setTimeout(resolve, 1800))]).then(([moduleExports]) => moduleExports)
-); // 1800 Dalay for displaying loading animation
+// const Appp = lazy(() =>
+// 	Promise.all([import("./App"), new Promise((resolve) => setTimeout(resolve, 1800))]).then(([moduleExports]) => moduleExports)
+// ); // 1800 Dalay for displaying loading animation
 
 const root = document.getElementById("root");
 const rootElement = (
 	<React.StrictMode>
-		<Suspense fallback={<Loader />}>
-			<GlobalStyle />
-			<App />
-		</Suspense>
+		{/* <Suspense fallback={<Loader />}> */}
+		<GlobalStyle />
+		<App />
+		{/* </Suspense> */}
 	</React.StrictMode>
 );
 

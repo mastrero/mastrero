@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Backdrop from "../UI/Backdrop";
-import { Container, NavList, NavListItem, NavMenu, Themer, ThemeIcon } from "../Styles/Sidebar";
+import { Container, NavList, NavListItem, NavMenu } from "../Styles/Sidebar";
 import { links } from "../utils";
 import * as Images from "../Assets";
 
-export default function ({ mainRef, toggleTheme }) {
+export default function ({ mainRef }) {
 	const [menu, showMenu] = useState(false);
 	const navRef = useRef(null);
 
@@ -16,16 +16,14 @@ export default function ({ mainRef, toggleTheme }) {
 				.map((key) => (sections[key].offsetTop <= +mainRef.current.scrollTop + 5 ? sections[key] : null))
 				.filter((item) => item)
 				.pop().id;
-			Object.values(navItems).map(({ rel, classList }) =>
-				rel === activeSectionId ? classList.add("active") : classList.remove("active")
-			);
+			Object.values(navItems).map(({ rel, classList }) => (rel === activeSectionId ? classList.add("active") : classList.remove("active")));
 		}, [mainRef]),
 
 		scrollToSection: useCallback((href) => {
 			document.getElementById(href).scrollIntoView(true);
 			setTimeout(() => {
 				showMenu(false);
-			}, 1500);
+			}, 1000);
 		}, []),
 
 		menuHandler: useCallback(() => {
@@ -46,13 +44,10 @@ export default function ({ mainRef, toggleTheme }) {
 	return (
 		<React.Fragment>
 			<Container show={menu}>
-				<div onClick={handlers.menuHandler} style={{ cursor: "pointer", height: 20 }}>
-					<NavMenu show={menu} />
+				<div style={{ height: 30 }}>
+					<NavMenu onClick={handlers.menuHandler} show={menu} />
 				</div>
 				<NavListElement scroll={handlers.scrollToSection} reference={navRef} />
-				<Themer onClick={toggleTheme}>
-					Theme <ThemeIcon />
-				</Themer>
 			</Container>
 			{menu && <Backdrop onClick={handlers.menuHandler} />}
 		</React.Fragment>
@@ -63,7 +58,8 @@ const NavListElement = ({ reference, scroll }) => (
 	<NavList ref={reference}>
 		{links.map((link, index) => (
 			<NavListItem className={!index && "active"} key={link} rel={link} onClick={() => scroll(link)} icon={Images[link]}>
-				{link}
+				<span>{link}</span>
+				<img src={Images[link]} alt={link} loading='lazy' />
 			</NavListItem>
 		))}
 	</NavList>

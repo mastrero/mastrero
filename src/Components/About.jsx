@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import { Content, Button, Details, DetailsItem } from "../Styles/About";
-import { aboutContent, aboutDetails } from "../utils";
+import { Content, Button } from "../Styles/About";
+import { aboutContent } from "../utils";
 
 export default function About() {
 	return (
@@ -11,20 +11,6 @@ export default function About() {
 				<p>{aboutContent.description}</p>
 			</Content>
 			<Button onClick={() => document.getElementById("Contact").scrollIntoView(true)}>GET IN TOUCH</Button>
-			<AboutME />
 		</Fragment>
-	);
-}
-
-function AboutME() {
-	return (
-		<Details>
-			{aboutDetails.map((details, index) => (
-				<DetailsItem key={index}>
-					<h2>{details.head}</h2>
-					<p>{details.para}</p>
-				</DetailsItem>
-			))}
-		</Details>
 	);
 }
