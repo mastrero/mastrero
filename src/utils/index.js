@@ -1,8 +1,8 @@
 export const links = ["About", "Skills", "Projects", "Contact", "Resume"];
 
 export const aboutContent = {
-	name: "I'm ArunKumar Nadikattu",
-	description: "A enthusiastic web developer, focused on the design and development of digital products.",
+	name: "I'm ArunKumar N",
+	description: "An enthusiastic web developer, focused on the design and development of digital products.",
 };
 
 export const know = [

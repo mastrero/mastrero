@@ -35,7 +35,7 @@ export default function ({ mainRef }) {
 		mainRef.current.addEventListener("scroll", () => {
 			handlers.checkScrolling();
 		});
-		return (mainRef) => {
+		return () => {
 			// mainRef.current.removeEventListener("scroll", () => {});
 			handlers.checkScrolling();
 		};

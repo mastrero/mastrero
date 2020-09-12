@@ -37,5 +37,6 @@ export { default as Python } from "./skills/learning/python.png";
 export { default as Django } from "./skills/learning/django.png";
 
 // MISC
-export { default as BottomImage } from "./misc/me.svg";
+export { default as Me } from "./misc/me.svg";
 export { default as Coffee } from "./misc/coffee.svg";
+export { default as Mastrero } from "./misc/mastrero.png";

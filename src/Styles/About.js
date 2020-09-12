@@ -1,135 +1,153 @@
-import styled, { keyframes } from "styled-components";
-
-// Keyframes
-const fadeDown = keyframes`
-	from {
-		opacity: 0;
-		transform: translate3d(0, -100%, 0);
-	}
-	to {
-		opacity: 1;
-		transform: 'none';
-	}
-`;
-
-const slideLeft = keyframes`
-	from {
-		transform: translate3d(-10%, 0, 0);
-		visibility: 'visible';
-	}
-	to {
-		transform: translate3d(0, 0, 0);
-	}
-`;
+import styled from "styled-components";
 
 // Styles
-export const Button = styled.button`
-	width: 190px;
-	padding: 8px 0;
-	margin-left: 50px;
-	cursor: pointer;
-	font-size: 20px;
-	font-family: "Segoe UI";
-	z-index: 15;
-	background-color: ${(props) => props.theme.font};
-	color: ${(props) => props.theme.bg};
+export const TopBar = styled.div`
 	display: flex;
-	justify-content: center;
-	outline: none;
-	border: none;
-	border-radius: 5px;
-	box-shadow: 0 2.5px 3.4px -15px rgba(0, 0, 0, 0.074), 0 5.7px 7.7px -15px rgba(0, 0, 0, 0.108), 0 9.9px 13.4px -15px rgba(0, 0, 0, 0.133),
-		0 15.8px 21.3px -15px rgba(0, 0, 0, 0.155), 0 24.3px 32.8px -15px rgba(0, 0, 0, 0.177), 0 38px 51.3px -15px rgba(0, 0, 0, 0.202),
-		0 63.1px 85.1px -15px rgba(0, 0, 0, 0.236), 0 126px 170px -15px rgba(0, 0, 0, 0.31);
-	&:after {
-		content: "→";
-		transform: translateX(5px);
+	justify-content: flex-end;
+	padding: 0 0 0 10px;
+	height: 45px;
+`;
+
+export const Logo = styled.img`
+	width: 140px;
+`;
+
+export const Banner = styled.div`
+	height: 100%;
+	padding-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--about-bg);
+	justify-content: space-between;
+	align-items: flex-end;
+`;
+
+export const Content = styled.div`
+	width: 55%;
+	padding: 10px;
+	@media screen and (max-width: 768px) {
+		width: 100%;
 	}
-	&:hover&:after {
-		transform: translateX(15px);
+	> h1 {
+		margin: 1.25rem 0;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 36px;
+		font-size: 2.25rem;
+	}
+	> h2 {
+		font-weight: 600;
+		line-height: 36px;
+		font-size: 24px;
+		> span {
+			color: var(--typed-font);
+			font-size: 24px;
+		}
+	}
+	> p {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 27px;
 	}
 `;
 
 export const Image = styled.img`
-	position: absolute;
-	bottom: 0;
-	z-index: 5;
+	flex-grow: 5;
 `;
 
-export const Content = styled.div`
-	padding: 10vh 0 0 50px;
-	color: ${(props) => props.theme.font};
-	@media screen and (max-width: 768px) {
-		padding: 8vh 0 0 10px;
-	}
-	> h1 {
-		/* animation: ${fadeDown} 0.85s ease-out 0s 1; */
-	}
-	> h2 {
-		/* animation: ${slideLeft} 0.5s ease-out 0s 1; */
-		font-weight: 500;
-		margin: 0;
-	}
-	> p {
-		/* animation: ${slideLeft} 0.68s ease-out 0s 1; */
-		margin: 0 0 10px 0;
-	}
-`;
-
-export const Details = styled.section`
+export const Links = styled.div`
+	padding: 5px;
 	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
 	justify-content: center;
-	position: absolute;
-	bottom: 0px;
-	@media screen and (max-width: 768px) {
-		width: 100%;
+`;
+
+export const Link = styled.button`
+	padding: 1px;
+	font-size: 18px;
+	margin: 0 10px;
+	background-color: transparent;
+	box-sizing: border-box;
+	cursor: pointer;
+	outline: 0;
+	border: none;
+	border-bottom: 2px solid #a5a5a5;
+	&:hover {
+		border-color: var(--typed-font);
+		color: var(--typed-font);
 	}
 `;
 
-export const DetailsItem = styled.article`
-	padding: 0.5rem 1rem;
-	flex: 1 1 250px;
-	opacity: 0.8;
+export const ModelWrapper = styled.div`
+	position: absolute;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: rgba(255, 255, 255, 0.5);
+	display: none;
+	&.show {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+`;
+
+export const Model = styled.div`
+	width: 0;
+	padding: 10px;
+	min-width: 0px;
+	background-color: #fff;
 	position: relative;
-	border-top: 3px solid ${(props) => props.theme.font + "55"};
-	transition: all 0.3s linear;
-	color: ${(props) => props.theme.font};
+	border-radius: 5%;
+	box-shadow: 0px 0px 10px 0px #777777;
+	> p {
+		margin: 0;
+		font-size: 18px;
+		font-weight: 600;
+		text-align: center;
+	}
+	&.show {
+		width: 40%;
+		min-width: 350px;
+	}
+`;
+
+export const ModelHeading = styled.div`
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px 0px #777777;
+	cursor: pointer;
+	position: absolute;
+	right: 0px;
+	top: 0%;
+`;
+
+export const CloseModel = styled.div`
+	&,
+	&:after {
+		width: 22px;
+		height: 2px;
+		background-color: black;
+		position: absolute;
+	}
+	& {
+		transform: rotate(45deg);
+		top: 50%;
+		right: 15%;
+	}
 	&:after {
 		content: "";
-		position: absolute;
-		top: -4px;
-		left: 0;
-		height: 0px;
-		width: 0%;
-		background: ${(props) => props.theme.font};
-		transition: all 0.15s linear;
+		transform: rotate(90deg);
 	}
-	&:before {
-	}
-	&:hover,
-	&:focus {
-		opacity: 1;
-	}
-	&:hover::after,
-	&:focus::after {
-		height: 4px;
-		width: 100%;
-	}
-	> h2 {
-		letter-spacing: 0.03em;
-		text-transform: uppercase;
-		margin-bottom: 1rem;
-		font-size: 1em;
-		margin: 8px 0;
-	}
-	> p {
-		line-height: 1.3;
-		margin: 0;
-		text-align: justify;
-	}
-	@media screen and (max-width: 768px) {
-		padding: 0.3rem 0.6rem;
+`;
+
+export const ModelForm = styled.form`
+	margin-top: 10px;
+	padding: 0 10px;
+	> span {
+		color: red;
+		font-size: 14px;
+		font-style: italic;
 	}
 `;
