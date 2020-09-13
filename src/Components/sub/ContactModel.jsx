@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { Input, Submit } from "../../UI/Input";
 
@@ -61,6 +61,15 @@ const Model = styled.div`
 			animation: ${wrapper_anim} 0.8s linear 0s 1;
 		}
 	}
+	> form {
+		margin-top: 10px;
+		padding: 0 10px;
+		> span {
+			color: red;
+			font-size: 14px;
+			font-style: italic;
+		}
+	}
 	@media screen and (max-width: 768px) {
 		width: 90%;
 	}
@@ -96,31 +105,58 @@ const CloseModel = styled.div`
 	}
 `;
 
-const ModelForm = styled.form`
-	margin-top: 10px;
-	padding: 0 10px;
-	> span {
-		color: red;
-		font-size: 14px;
-		font-style: italic;
-	}
-`;
-
 export default function ContactModal({ show, close }) {
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		purpose: "",
+	});
+	const [submitted, setSubmitted] = useState(false);
+
+	const handlers = {
+		updateValue: ({ target: { name, value } }) => {
+			setFormData((prevData) => {
+				prevData[name] = value;
+				return { ...prevData };
+			});
+		},
+		encode: (data) =>
+			Object.keys(data)
+				.map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+				.join("&"),
+		submitForm: (e) => {
+			if (Object.values(formData).every((data) => data)) {
+				e.preventDefault();
+				fetch("/", {
+					method: "POST",
+					headers: { "Content-Type": "application/x-www-form-urlencoded" },
+					body: handlers.encode({ "form-name": "Get_In_Touch", ...formData }),
+				})
+					.then(() => setSubmitted(true))
+					.catch((error) => alert(error));
+			}
+		},
+	};
+
 	return (
 		<ModelWrapper className={show ? "show" : ""}>
 			<Model className={show ? "show" : ""}>
-				<p>Reach me out ...</p>
+				<p>{!submitted ? "Reach me out ..." : "CHEERS 🍻 !!"}</p>
 				<ModelHeading onClick={close}>
 					<CloseModel />
 				</ModelHeading>
-				<ModelForm name='Get_In_Touch' data-netlify='true' data-netlify-honeypot='bot-field'>
-					<Input type='text' label='Name' name='Name' />
-					<Input type='email' label='Email ID' name='Email' />
-					<Input type='text' label='Purpose' name='Purpose' />
-					<Submit text='Submit' />
-					<span>* - required</span>
-				</ModelForm>
+				{!submitted ? (
+					<form method='post' name='Get_In_Touch'>
+						<input type='hidden' name='form-name' value='Get_In_Touch' />
+						<Input type='text' label='Name' name='name' />
+						<Input type='email' label='Email ID' name='email' />
+						<Input type='text' label='Purpose' name='purpose' />
+						<Submit text='Submit' />
+						<span>* - required</span>
+					</form>
+				) : (
+					<p>We shall have a conversation soon ...</p>
+				)}
 			</Model>
 		</ModelWrapper>
 	);

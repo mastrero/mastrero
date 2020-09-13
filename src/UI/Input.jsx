@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 		`&:after {
     content: "*";
 	}`}
+	> label,
 	> span {
 		font-size: 1rem;
 		font-weight: 500;
@@ -39,16 +40,20 @@ const Button = styled.button`
 	cursor: pointer;
 `;
 
-export function Input({ type = "text", label = "input", isRequired = true, name }) {
+export function Input({ value, update = () => {}, type = "text", label = "input", isRequired = true, name = label }) {
 	return (
 		<Wrapper required={isRequired}>
-			<span style={{ width: "25%" }}>{label}</span>
+			<label style={{ width: "25%" }}>{label}</label>
 			<span>»</span>
-			<input type={type} name={name} aria-label={label} title={label} required={isRequired}></input>
+			<input value={value} onChange={update} type={type} name={name} aria-label={label} title={label} required={isRequired}></input>
 		</Wrapper>
 	);
 }
 
-export function Submit({ text }) {
-	return <Button>{text}</Button>;
+export function Submit({ text = "Submit", click = () => {} }) {
+	return (
+		<Button type='submit' onClick={click}>
+			{text}
+		</Button>
+	);
 }
