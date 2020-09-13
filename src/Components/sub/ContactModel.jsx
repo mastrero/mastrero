@@ -114,10 +114,10 @@ export default function ContactModal({ show, close }) {
 				<ModelHeading onClick={close}>
 					<CloseModel />
 				</ModelHeading>
-				<ModelForm>
-					<Input type='text' label='Name' />
-					<Input type='email' label='Email ID' />
-					<Input type='text' label='Purpose' />
+				<ModelForm name='Get_In_Touch' data-netlify='true' data-netlify-honeypot='bot-field'>
+					<Input type='text' label='Name' name='Name' />
+					<Input type='email' label='Email ID' name='Email' />
+					<Input type='text' label='Purpose' name='Purpose' />
 					<Submit text='Submit' />
 					<span>* - required</span>
 				</ModelForm>

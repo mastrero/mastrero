@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ModelForm = styled.div`
+const Wrapper = styled.div`
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
@@ -39,13 +39,13 @@ const Button = styled.button`
 	cursor: pointer;
 `;
 
-export function Input({ type = "text", label = "input", isRequired = true }) {
+export function Input({ type = "text", label = "input", isRequired = true, name }) {
 	return (
-		<ModelForm required={isRequired}>
+		<Wrapper required={isRequired}>
 			<span style={{ width: "25%" }}>{label}</span>
 			<span>»</span>
-			<input type={type} required={isRequired}></input>
-		</ModelForm>
+			<input type={type} name={name} aria-label={label} title={label} required={isRequired}></input>
+		</Wrapper>
 	);
 }
 
