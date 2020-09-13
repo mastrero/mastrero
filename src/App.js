@@ -22,11 +22,12 @@ export default function App() {
 }
 
 const Sections = () => {
-	let sections = links.map((link) => (
-		<Section id={link} key={link}>
-			{Components[link]()}
-		</Section>
-	));
-
-	return sections;
+	return links.map((link) => {
+		let Component = Components[link]();
+		return (
+			<Section id={link} key={link}>
+				{Component}
+			</Section>
+		);
+	});
 };

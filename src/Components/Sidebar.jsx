@@ -3,6 +3,7 @@ import Backdrop from "../UI/Backdrop";
 import { Container, NavList, NavListItem, NavMenu } from "../Styles/Sidebar";
 import { links } from "../utils";
 import * as Images from "../Assets";
+import { ImageUtils } from "../utils";
 
 export default function ({ mainRef }) {
 	const [menu, showMenu] = useState(false);
@@ -36,7 +37,6 @@ export default function ({ mainRef }) {
 			handlers.checkScrolling();
 		});
 		return () => {
-			// mainRef.current.removeEventListener("scroll", () => {});
 			handlers.checkScrolling();
 		};
 	}, [handlers, mainRef]);
@@ -59,7 +59,7 @@ const NavListElement = ({ reference, scroll }) => (
 		{links.map((link, index) => (
 			<NavListItem className={!index && "active"} key={link} rel={link} onClick={() => scroll(link)} icon={Images[link]}>
 				<span>{link}</span>
-				<img src={Images[link]} alt={link} loading='lazy' />
+				<img src={ImageUtils.resizeImage(Images[link], "smartcrop", 25, 25)} alt={link} loading='lazy' />
 			</NavListItem>
 		))}
 	</NavList>

@@ -1,13 +1,11 @@
 import React, { Fragment, useState } from "react";
 import { Content, TopBar, Logo, Image, Banner, Links, Link } from "../Styles/About";
-import { ModelWrapper, Model, ModelHeading, CloseModel, ModelForm } from "../Styles/About";
 import { aboutContent } from "../utils";
 import { Mastrero, Me } from "../Assets";
-import { Input, Submit } from "../UI/Input";
+import ContactModel from "./sub/ContactModel";
 
 export default function About() {
 	const [model, showModel] = useState(false);
-
 	return (
 		<Fragment>
 			<TopBar>
@@ -28,27 +26,7 @@ export default function About() {
 				</Content>
 				<Image src={Me} alt='My Self' />
 			</Banner>
-			<ContactModal show={model} close={() => showModel(!model)} />
+			{model && <ContactModel show={model} close={() => showModel(!model)} />}
 		</Fragment>
 	);
 }
-
-const ContactModal = ({ show, close }) => {
-	return (
-		<ModelWrapper className={show ? "show" : ""}>
-			<Model className={show ? "show" : ""}>
-				<p>Reach me out ...</p>
-				<ModelHeading onClick={close}>
-					<CloseModel />
-				</ModelHeading>
-				<ModelForm>
-					<Input type='text' label='Name' />
-					<Input type='email' label='Email ID' />
-					<Input type='text' label='Purpose' />
-					<Submit text='Submit' />
-					<span>* - required</span>
-				</ModelForm>
-			</Model>
-		</ModelWrapper>
-	);
-};

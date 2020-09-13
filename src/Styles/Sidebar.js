@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.aside`
-	min-width: 220px;
+	min-width: 225px;
 	height: 100vh;
 	background-color: ${(props) => props.theme.bg};
 	color: ${(props) => props.theme.font};
@@ -86,7 +86,7 @@ export const NavMenu = styled.a`
 	& {
 		position: absolute;
 		top: 15px;
-		left: 191px;
+		left: 195px;
 	}
 	&:after {
 		top: 8px;
