@@ -5,7 +5,7 @@
 	"private": true,
 	"dependencies": {
 		"@phuocng/react-pdf-viewer": "1.7.0",
-		"pdfjs-dist": "2.4.456",
+		"pdfjs-dist": "2.5.207",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"react-scripts": "3.4.3",
