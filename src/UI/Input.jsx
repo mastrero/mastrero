@@ -39,16 +39,16 @@ const Button = styled.button`
 	cursor: pointer;
 `;
 
-export function Input({ type = "text", label = "input", isRequired = true }) {
+export function Input({ type = "text", name = "", value = "", update = () => {}, label = "", isRequired = true }) {
 	return (
 		<ModelForm required={isRequired}>
-			<span style={{ width: "25%" }}>{label}</span>
+			<label style={{ width: "25%" }}>{label}</label>
 			<span>»</span>
-			<input type={type} required={isRequired}></input>
+			<input type={type} name={name} value={value} onChange={update} required={isRequired}></input>
 		</ModelForm>
 	);
 }
 
-export function Submit({ text }) {
-	return <Button>{text}</Button>;
+export function Submit({ text = "", click = () => {} }) {
+	return <Button onClick={click}>{text}</Button>;
 }
