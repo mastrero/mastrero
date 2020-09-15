@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# Netlify Functions build
+/functions
+
 # testing
 /coverage
 
