@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
+
+const anim_navItems = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+`;
 
 export const Container = styled.aside`
 	min-width: 225px;
@@ -26,7 +37,21 @@ export const NavList = styled.nav`
 	@media screen and (max-width: 768px) {
 		padding-right: 0;
 	}
+	${(props) => {
+		return props.links.map(
+			(l, i) => css`
+				> a:nth-child(${i + 1}) {
+					animation-name: ${anim_navItems};
+					animation-duration: 0.55s;
+					animation-timing-function: ease-in-out;
+					animation-delay: ${100 * i + 1}ms;
+					animation-fill-mode: both;
+				}
+			`
+		);
+	}}
 `;
+
 export const NavListItem = styled.a`
 	color: ${(props) => props.theme.font};
 	margin-top: 10px;

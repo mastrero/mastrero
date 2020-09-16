@@ -55,7 +55,7 @@ export default function ({ mainRef }) {
 }
 
 const NavListElement = ({ reference, scroll }) => (
-	<NavList ref={reference}>
+	<NavList ref={reference} links={links}>
 		{links.map((link, index) => (
 			<NavListItem className={!index && "active"} key={link} rel={link} onClick={() => scroll(link)} icon={Images[link]}>
 				<span>{link}</span>
