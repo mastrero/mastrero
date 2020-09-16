@@ -53,6 +53,7 @@ export const Content = styled.div`
 
 export const Image = styled.img`
 	flex-grow: 5;
+	width: initial;
 `;
 
 export const Links = styled.div`

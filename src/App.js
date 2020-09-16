@@ -1,7 +1,8 @@
-import React, { useRef, Suspense } from "react";
+import React, { useRef } from "react";
 import { ThemeProvider } from "styled-components";
-import * as Components from "./Components";
+import Components from "./Components";
 import useTheme from "./UI/Theme";
+import ScrollToTop from "./UI/ScrollToTop";
 import { links } from "./utils";
 import { Main, Section } from "./globalstyles";
 
@@ -11,9 +12,8 @@ export default function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Suspense fallback={""}>
-				<Components.Sidebar toggleTheme={toggleTheme} mainRef={mainRef} />
-			</Suspense>
+			<Components.Sidebar toggleTheme={toggleTheme} mainRef={mainRef} />
+			<ScrollToTop mainRef={mainRef} />
 			<Main ref={mainRef}>
 				<Sections />
 			</Main>
@@ -23,10 +23,10 @@ export default function App() {
 
 const Sections = () => {
 	return links.map((link) => {
-		let Component = Components[link]();
+		let Component = Components[link];
 		return (
 			<Section id={link} key={link}>
-				{Component}
+				<Component />
 			</Section>
 		);
 	});

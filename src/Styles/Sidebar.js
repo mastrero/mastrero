@@ -18,7 +18,6 @@ export const Container = styled.aside`
 	color: ${(props) => props.theme.font};
 	box-shadow: -1px 0px 20px 0px rgb(160 160 160 / 62%);
 	transition: all 0.3s linear;
-	// position: sticky;
 	z-index: 30;
 	top: 0;
 	overflow-y: auto;

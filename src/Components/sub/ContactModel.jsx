@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import styled, { keyframes } from "styled-components";
 import { Input, Submit } from "../../UI/Input";
 import emailjs from "emailjs-com";
@@ -44,6 +44,7 @@ const ModelWrapper = styled.div`
 const Model = styled.div`
 	width: 40%;
 	max-width: 380px;
+	min-height: 200px;
 	padding: 10px;
 	min-width: 0px;
 	background-color: #fff;
@@ -140,7 +141,7 @@ export default function ContactModal({ show, close }) {
 	return (
 		<ModelWrapper className={show ? "show" : ""}>
 			<Model className={show ? "show" : ""}>
-				<p>{!submitted ? "Reach me out ..." : "CHEERS 🍻 !!"}</p>
+				<p>{!submitted ? "Reach me out ... 🐱‍🏍" : "CHEERS 🍻 !!"}</p>
 				<ModelHeading onClick={close}>
 					<CloseModel />
 				</ModelHeading>
@@ -153,7 +154,16 @@ export default function ContactModal({ show, close }) {
 						<span>* - required</span>
 					</form>
 				) : (
-					<p>We shall have a conversation soon ...</p>
+					<Fragment>
+						<p>We shall have a conversation soon ...</p>
+						<img
+							onClick={() => window.open("https://dribbble.com/catherinehpkns", "_blank")}
+							src='https://cdn.dribbble.com/users/1088487/screenshots/3020473/cheers-dribbble.gif'
+							style={{ width: "50%", cursor: "pointer", display: "block", margin: "0 auto" }}
+							alt='Cheers by Catherine Hopkins 💖'
+							title="'Cheers' by Catherine Hopkins 💖"
+						/>
+					</Fragment>
 				)}
 			</Model>
 		</ModelWrapper>
