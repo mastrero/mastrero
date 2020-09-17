@@ -33,10 +33,12 @@ export const Box = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	display: flex;
-	/* border-bottom: 2px solid ${(props) => props.theme.font}; */
 	transition: all 0.15s linear;
 	box-shadow: 0px 0px 7px 0px rgb(204 204 204);
 	position: relative;
+	> span {
+		padding: 0 5px;
+	}
 	> img {
 		width: 25px;
 		height: 25px;

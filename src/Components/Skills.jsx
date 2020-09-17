@@ -27,7 +27,7 @@ const PouplateItems = ({ items }) => (
 		{items.map((item, index) => (
 			<Box key={item + index}>
 				<span>{item}</span>
-				<img src={Images[item.replace(/ /g, "")]} alt={item} loading='lazy' />
+				<img src={Images[item.replace(/ /g, "")]} alt='' title={item} loading='lazy' />
 			</Box>
 		))}
 	</Flex>

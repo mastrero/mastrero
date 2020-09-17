@@ -35,6 +35,7 @@ export { default as Heroku } from "./skills/tools/heroku.png";
 export { default as TypeScript } from "./skills/learning/typescript.png";
 export { default as Python } from "./skills/learning/python.png";
 export { default as Django } from "./skills/learning/django.png";
+export { default as GraphQL } from "./skills/learning/graphql.png";
 
 // MISC
 export { default as Me } from "./misc/me.svg";

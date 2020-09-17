@@ -81,10 +81,8 @@ export default function ScrollToTop({ mainRef }) {
 	const checkScrollTop = useCallback(() => {
 		if (!showScroll && mainRef.current.scrollTop > 100) {
 			setShowScroll(true);
-			console.log("if");
 		} else if (showScroll && mainRef.current.scrollTop <= 100) {
 			setShowScroll(false);
-			console.log("else");
 		}
 	}, [showScroll, setShowScroll, mainRef]);
 

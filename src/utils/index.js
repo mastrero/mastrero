@@ -23,7 +23,7 @@ export const know = [
 	"PostgreSQL",
 ];
 export const tools = ["Git", "GitHub", "VS Code", "Adobe XD", "FireBase", "MongoDB", "Netlify", "Heroku"];
-export const learning = ["TypeScript", "Python", "Django"];
+export const learning = ["TypeScript", "GraphQL", "Python", "Django"];
 export const interests = ["Web Development", "UI Designing", "Data Science", "Problem Solving", "Gardening"];
 
 export { default as ImageUtils } from "./TransformImages";
