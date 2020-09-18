@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../components/seo';
+import SEO from '../components/sub/SEO';
 import styled from 'styled-components';
 
 const Section = styled.section`
