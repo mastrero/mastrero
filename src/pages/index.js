@@ -1,8 +1,8 @@
 import React, { Fragment, useRef } from 'react';
-import Components from '../components/Index';
+import Components from '../components/index';
 import ScrollToTop from '../components/ui/ScrollToTop';
 import { links } from '../utils';
-import SEO from '../components/seo/Index';
+import SEO from '../components/seo/index';
 import { GlobalStyle, Main, Section } from '../styles/Global';
 
 const Sections = () => {
