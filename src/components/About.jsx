@@ -4,9 +4,11 @@ import { aboutContent } from '../utils';
 import { Mastrero } from '../images';
 import ContactModel from './sub/ContactModel';
 import MyImage from './sub/MyImage';
+import ScrollFeed from './ui/Feed';
 
 export default function About() {
   const [model, showModel] = useState(false);
+  const feed = ['dreamer', 'achiever', 'maker', 'coder', 'developer'];
   return (
     <Fragment>
       <TopBar>
@@ -16,7 +18,8 @@ export default function About() {
         <Content>
           <h1>Hey there,</h1>
           <h2>
-            {aboutContent.name} <span id="text" />
+            {aboutContent.name}
+            <ScrollFeed data={feed} duration={2500} prefix=" - a"></ScrollFeed>
           </h2>
           <p>{aboutContent.description}</p>
           <Links>

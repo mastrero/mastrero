@@ -39,10 +39,6 @@ export const Content = styled.div`
     font-weight: 600;
     line-height: 36px;
     font-size: 24px;
-    > span {
-      color: var(--typed-font);
-      font-size: 24px;
-    }
   }
   > p {
     font-weight: 400;

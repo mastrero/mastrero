@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ModelForm = styled.div`
   display: flex;
@@ -39,7 +40,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export function Input({ type = 'text', name = '', value = '', update = () => {}, label = '', isRequired = true }) {
+export function Input({ type, name, value, update, label, isRequired }) {
   return (
     <ModelForm required={isRequired}>
       <label style={{ width: '25%' }}>{label}</label>
@@ -52,3 +53,32 @@ export function Input({ type = 'text', name = '', value = '', update = () => {},
 export function Submit({ text = '', click = () => {} }) {
   return <Button onClick={click}>{text}</Button>;
 }
+
+//! PROPTYPES
+Input.defaultProps = {
+  type: 'text',
+  name: '',
+  value: '',
+  update: () => alert('update'),
+  label: '',
+  isRequired: true,
+};
+
+Input.propTypes = {
+  type: PropTypes.string,
+  name: PropTypes.string,
+  value: PropTypes.string,
+  update: PropTypes.func,
+  label: PropTypes.string,
+  isRequired: PropTypes.bool,
+};
+
+Submit.defaultProps = {
+  text: 'Submit',
+  click: () => alert('Submit'),
+};
+
+Submit.propTypes = {
+  text: PropTypes.string,
+  click: PropTypes.func,
+};

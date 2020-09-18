@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import PropTypes from 'prop-types';
 import Backdrop from './ui/Backdrop';
 import { Container, NavList, NavListItem, NavMenu } from '../styles/Sidebar';
 import { links } from '../utils';
 import * as Images from '../images';
 
-export default function ({ mainRef }) {
+export default function Sidebar({ mainRef }) {
   const [menu, showMenu] = useState(false);
   const navRef = useRef(null);
 
@@ -65,3 +66,13 @@ const NavListElement = ({ reference, scroll }) => (
     ))}
   </NavList>
 );
+
+//! PROPTYPES
+NavListElement.propTypes = {
+  reference: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ current: PropTypes.any })]),
+  scroll: PropTypes.func,
+};
+
+Sidebar.propTypes = {
+  mainRef: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ current: PropTypes.any })]),
+};

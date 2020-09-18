@@ -95,7 +95,7 @@ export const NavMenu = styled.a`
   & {
     position: absolute;
     top: 15px;
-    left: 195px;
+    right: 5px;
   }
   &:after {
     top: 8px;

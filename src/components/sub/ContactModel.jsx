@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { Input, Submit } from '../ui/Input';
 import Loader from '../ui/Loader';
@@ -183,3 +184,9 @@ export default function ContactModal({ show, close }) {
     </ModelWrapper>
   );
 }
+
+//! PROPTYPES
+ContactModal.propTypes = {
+  show: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
+};

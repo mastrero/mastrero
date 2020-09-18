@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import { Wrapper, Flex, Box } from '../styles/Skills';
+import PropTypes from 'prop-types';
+
 import * as Images from '../images';
 import { know, tools, learning } from '../utils';
 
@@ -32,3 +34,8 @@ const PouplateItems = ({ items }) => (
     ))}
   </Flex>
 );
+
+//! PROPTYPES
+PouplateItems.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.string),
+};

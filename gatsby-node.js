@@ -1,11 +1,12 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
-exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
-  const config = getConfig();
-  if (stage.startsWith('develop') && config.resolve) {
-    config.resolve.alias = {
-      ...config.resolve.alias,
+exports.onCreateWebpackConfig = ({ getConfig, stage, actions }) => {
+  if (stage === `build-javascript` || getConfig().mode === 'production') {
+    actions.setWebpackConfig({
+      devtool: false,
+    });
+  }
+  if (stage.startsWith('develop') && getConfig().resolve) {
+    getConfig().resolve.alias = {
+      ...getConfig().resolve.alias,
       'react-dom': '@hot-loader/react-dom',
     };
   }
