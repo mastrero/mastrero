@@ -1,8 +1,11 @@
-import About from "./About";
-import Contact from "./Contact";
-import Projects from "./Projects";
-import Resume from "./Resume";
-import Sidebar from "./Sidebar";
-import Skills from "./Skills";
+// import { lazy } from 'react';
 
+import About from './About';
+import Contact from './Contact';
+import Projects from './Projects';
+import Resume from './Resume';
+import Skills from './Skills';
+import Sidebar from './Sidebar';
+
+// const Sidebar = lazy(() => import('./Sidebar'));
 export default { About, Contact, Projects, Resume, Skills, Sidebar };

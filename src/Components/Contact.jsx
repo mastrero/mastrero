@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
 export default function Contact() {
-	return <Fragment></Fragment>;
+  return <Fragment></Fragment>;
 }

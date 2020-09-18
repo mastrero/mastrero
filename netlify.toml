@@ -1,8 +1,8 @@
 [build]
-  base = "/"
-  publish = "build/"
-  command = "yarn build"
-  functions = "functions/"
+  publish = "public"
+  command = "gatsby build"
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
 [[headers]]
   for = "/*"
   [headers.values]
