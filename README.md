@@ -52,6 +52,77 @@
 ![](https://github-readme-stats.vercel.app/api?username=mastrero&show_icons=true)
 
 <!--START_SECTION:waka-->
+![Profile Views](http://img.shields.io/badge/Profile%20Views-0-blue)
+
+**🐱 My Github Data** 
+
+> 🏆 194 Contributions in the Year 2020
+ > 
+> 📦 20.1 kB Used in Github's Storage 
+ > 
+> 💼 Opted to Hire
+ > 
+> 📜 19 Public Repositories
+ > 
+> 🔑 11 Private Repositories 
+
+**I'm an Early 🐤** 
+
+```text
+🌞 Morning    34 commits     ████░░░░░░░░░░░░░░░░░░░░░   17.35% 
+🌆 Daytime    70 commits     █████████░░░░░░░░░░░░░░░░   35.71% 
+🌃 Evening    74 commits     █████████░░░░░░░░░░░░░░░░   37.76% 
+🌙 Night      18 commits     ██░░░░░░░░░░░░░░░░░░░░░░░   9.18%
+
+```
+📅 **I'm Most Productive on Monday** 
+
+```text
+Monday       47 commits     ██████░░░░░░░░░░░░░░░░░░░   23.98% 
+Tuesday      39 commits     █████░░░░░░░░░░░░░░░░░░░░   19.9% 
+Wednesday    19 commits     ██░░░░░░░░░░░░░░░░░░░░░░░   9.69% 
+Thursday     11 commits     █░░░░░░░░░░░░░░░░░░░░░░░░   5.61% 
+Friday       40 commits     █████░░░░░░░░░░░░░░░░░░░░   20.41% 
+Saturday     17 commits     ██░░░░░░░░░░░░░░░░░░░░░░░   8.67% 
+Sunday       23 commits     ███░░░░░░░░░░░░░░░░░░░░░░   11.73%
+
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+⌚︎ Time Zone: Asia/Kolkata
+
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+
+🐱‍💻 Projects: 
+No Activity Tracked This Week
+
+💻 Operating System: 
+No Activity Tracked This Week
+
+```
+
+**I Mostly Code in JavaScript** 
+
+```text
+JavaScript               18 repos            ██████████████████████░░░   90.0% 
+TypeScript               1 repos             █░░░░░░░░░░░░░░░░░░░░░░░░   5.0% 
+HTML                     1 repos             █░░░░░░░░░░░░░░░░░░░░░░░░   5.0%
+
+```
+
+
+**Timeline**
+
+![Chart not found](https://github.com/mastrero/mastrero/blob/master/charts/bar_graph.png) 
+
+
 <!--END_SECTION:waka-->
 
 ---
