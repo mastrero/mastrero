@@ -1,8 +1,14 @@
-<img align="right" alt="GIF" width="42%" src="https://github.com/mastrero/assets/raw/main/mastrero/Myself.gif" />
+<section id="introduction">
+  <img align="right" alt="GIF" width="42%" src="https://github.com/mastrero/assets/raw/main/mastrero/Myself.gif" />
+  <h2>
+    <> <b> Hello world
+      <img width="25px" src="https://github.com/mastrero/assets/raw/main/mastrero/Hello_World.gif" alt="world"> </b>
+    <\>
+  </h2>
+  <h2> I'm <a href="https://arunkumar.design/">ArunKumar Nadikattu</a>.</h2>
+</section>
 
-## **<> Hello world <img width="25px" src="https://github.com/mastrero/assets/raw/main/mastrero/Hello_World.gif" > </>**
-
-## I'm [ArunKumar Nadikattu](https://arunkumar.design/).
+<hr />
 
 <p>
   <em>
@@ -15,11 +21,12 @@
 
 - 👨🏻‍💻 I’m currently working on taking my skills to the peeks.
 - 🤼 I’m looking to collaborate on any Open Source Projects.
-- 💁🏻‍♂️ [Need to reach me ...](#Contact%20Me%20💬) 👇🏻
-- ❓ [Ask me about anything, I would like to answer.](#Contact%20Me%20💬)
-- 📃 My [resume](). Hire me 🥰
+- 💁🏻‍♂️ [Need to reach me ...](#contact-me) 👇🏻
+- ❓ [Ask me about anything, I would like to answer.](#contact-me)
+- 📃 My [resume](https://drive.google.com/file/d/14YWHGoDYXgaBtXKaOw2ylG8Hp-vJxSmy/view). Hire me 🥰
 
-### **I use**
+<section id="skills">
+<h3><b>I use</b></h3>
 
 <!-- ![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5) -->
 
@@ -45,31 +52,34 @@
 <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/graphql.png">
 <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/django.png">
 
+</section>
+
 ---
 
-### **Stats 💬**
+<h3 id="stats"><b>Stats 📈</b></h3>
 
-![](https://github-readme-stats.vercel.app/api?username=mastrero&show_icons=true)
+<img src="https://github-readme-stats.vercel.app/api?username=mastrero&show_icons=true" alt="stats" >
 
 <!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
 
----
+<hr />
 
-### **Contact Me 💬**
+<section id="contact-me">
+  <h3><b>Contact Me 💬</b></h3>
+  <b>I'm always interested in meeting new & interesting people like you, so feel free to reach out to me.</b>
+  <div>
+    <a href="mailto:arunaiekhil@gmail.com" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/gmail_dark.png" width="35" alt="mail" ></a>&nbsp;
+    <a href="https://github.com/mastrero" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/github.svg" width="35" alt="github" ></a>&nbsp;
+    <a href="https://www.linkedin.com/in/arun-kumar-n/" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/linkedin_dark.png" width="35" alt="linkedin" ></a>&nbsp;
+    <a href="https://discord.com/users/ArunKumar#1332" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/discord_dark.png" width="35" alt="discord" ></a>&nbsp;
+    <a href="https://arunkumar.design" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/site.svg" width="35" alt="website" ></a>&nbsp;
+  </div>
+</section>
 
-**I'm always interested in meeting new & interesting people like you, so feel free to reach out to me.**
+<hr />
 
-<div>
-  <a href="arunaiekhil@gmail.com" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/gmail_dark.png" width="35" alt="mail" ></a>&nbsp;
-  <a href="https://github.com/mastrero" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/github.svg" width="35" alt="github" ></a>&nbsp;
-  <a href="https://www.linkedin.com/in/arun-kumar-n/" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/linkedin_dark.png" width="35" alt="linkedin" ></a>&nbsp;
-  <a href="https://discord.com/users/ArunKumar#1332" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/discord_dark.png" width="35" alt="discord" ></a>&nbsp;
-  <a href="https://arunkumar.design" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/site.svg" width="35" alt="website" ></a>&nbsp;
-</div>
-
----
-
-### **Thank You - 🙏🏼**
-
-💖 From [mastrero](https://github.com/mastrero)
+<section id="conclusion">
+  <h3><b>Thank You - 🙏🏼</b></h3>
+  <p>💖 From <a href="https://github.com/mastrero">mastrero</a><p>
+</section>
