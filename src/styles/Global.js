@@ -1,11 +1,25 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+export const MediaQueryMobile = content => `@media screen and (max-width: 768px) { ${content} }`;
+export const MediaQueryDesktop = content => `@media screen and (min-width: 768px) { ${content} }`;
+
 export const GlobalStyle = createGlobalStyle`
   *,
   html,
   body {
+    -webkit-tap-highlight-color: transparent;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
       'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  }
+
+  html {
+    --typed-font: #65b4f0;
+    --about-bg: #ffee97;
+    --white: #ffffff;
+    --black: #000000;
+    --pink: #ff5f5f;
+    --purple: #BD5FFF;
+    --teal: #79d6b5;
   }
 
   body {
@@ -16,15 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-
-    /* GLOBALS */
-    --typed-font: #65b4f0;
-    --about-bg: #ffee97;
-    --white: #ffffff;
-    --black: #000000;
   }
 
   #gatsby-focus-wrapper {
@@ -44,8 +50,5 @@ export const Section = styled.section`
   min-height: 100%;
   background-color: var(--white);
   position: relative;
-  border-bottom: 1px solid black;
-  @media screen and (max-width: 768px) {
-    margin-left: 35px;
-  }
+  ${() => MediaQueryMobile('margin-left: 35px;')}
 `;

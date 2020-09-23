@@ -13,7 +13,7 @@ public
 
 # testing
 /coverage
-
+set_env.ps1
 # production
 /build
 

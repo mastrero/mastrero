@@ -1,15 +1,17 @@
 import styled from 'styled-components';
+import { MediaQueryMobile } from './Global';
 
 // Styles
 export const TopBar = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 0 0 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
   height: 45px;
 `;
 
 export const Logo = styled.img`
   width: 140px;
+  border-bottom: 1px solid black;
 `;
 
 export const Banner = styled.div`
@@ -25,9 +27,7 @@ export const Banner = styled.div`
 export const Content = styled.div`
   width: 55%;
   padding: 10px;
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
+  ${() => MediaQueryMobile('width: 100%;')}
   > h1 {
     margin: 1.25rem 0;
     font-style: normal;
@@ -54,17 +54,20 @@ export const Links = styled.div`
 `;
 
 export const Link = styled.button`
-  padding: 1px;
-  font-size: 18px;
-  margin: 0 10px;
+  padding: 0 1px;
+  font-size: 1.15rem;
+  margin: 0 15px;
   background-color: transparent;
   box-sizing: border-box;
+  color: var(--black);
   cursor: pointer;
   outline: 0;
   border: none;
   border-bottom: 2px solid #a5a5a5;
   &:hover {
-    border-color: var(--typed-font);
-    color: var(--typed-font);
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: border 0.4s ease-in;
+    border-color: var(--black);
   }
 `;

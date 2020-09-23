@@ -87,7 +87,7 @@ ScrollFeed.defaultProps = {
   prefix: '',
   duration: 2500,
   effect: defaultAnimation,
-  fontColor: '#65b4f0',
+  fontColor: '#000000',
   backgroundColor: 'transparent',
   fontSize: '24px',
 };

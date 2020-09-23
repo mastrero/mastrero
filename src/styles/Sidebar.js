@@ -1,4 +1,5 @@
 import styled, { keyframes, css } from 'styled-components';
+import { MediaQueryMobile, MediaQueryDesktop } from './Global';
 
 const anim_navItems = keyframes`
   0% {
@@ -21,21 +22,20 @@ export const Container = styled.aside`
   z-index: 30;
   top: 0;
   overflow-y: auto;
-  @media screen and (max-width: 768px) {
-    transform: ${props => (props.show ? `translateX(0%)` : `translateX(-85%)`)};
-    transition: all 0.3s linear;
-    box-shadow: 2px -1px 2px 0px rgb(160 160 160 / 62%);
-    position: fixed;
-  }
+  ${props =>
+    MediaQueryMobile(
+      `transform: ${props.show ? `translateX(0%)` : `translateX(-85%)`};
+      transition: all 0.3s linear;
+      box-shadow: 2px -1px 2px 0px rgb(160 160 160 / 62%);
+      position: fixed;`
+    )}
 `;
 
 export const NavList = styled.nav`
   padding: 0 5px;
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 768px) {
-    padding-right: 0;
-  }
+  ${() => MediaQueryMobile('padding-right: 0;')}
   ${props => {
     return props.links.map(
       (l, i) => css`
@@ -117,7 +117,5 @@ export const NavMenu = styled.a`
 			transform: rotate(90deg);
 			transform-origin: 32% 5px;
 		}`}
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
+  ${() => MediaQueryDesktop(`display: none;`)}
 `;

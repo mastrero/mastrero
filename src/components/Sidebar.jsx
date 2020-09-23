@@ -24,9 +24,7 @@ export default function Sidebar({ mainRef }) {
 
     scrollToSection: useCallback(href => {
       document.getElementById(href).scrollIntoView(true);
-      setTimeout(() => {
-        showMenu(false);
-      }, 1000);
+      showMenu(false);
     }, []),
 
     menuHandler: useCallback(() => {

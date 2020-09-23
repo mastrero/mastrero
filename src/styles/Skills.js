@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-// KEYFRAMES
-
 // STYLES
 export const Wrapper = styled.div`
   padding-left: 50px;
@@ -24,18 +22,24 @@ export const Flex = styled.div`
 `;
 
 export const Box = styled.div`
-  height: 100%;
   margin: 5px;
   padding: 5px;
   background-color: var(--white);
   color: var(--black);
-  align-self: center;
-  justify-content: space-between;
+  cursor: pointer;
   align-items: center;
   display: flex;
   transition: all 0.15s linear;
-  box-shadow: 0px 0px 7px 0px rgb(204 204 204);
+  box-shadow: 2px 2px 5px 0 rgb(204 204 204);
   position: relative;
+  border-top-left-radius: 22px;
+  &:hover {
+    transition: border-top-left-radius 0.2s ease-in;
+    border-top-left-radius: 0;
+    background-color: var(--black);
+    color: var(--white);
+    box-shadow: 2px 2px 5px 0 rgb(41 41 41);
+  }
   > span {
     padding: 0 5px;
   }

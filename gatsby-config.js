@@ -19,6 +19,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `${process.env.GOOGLE_ANALYTICS_ID}`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-brotli',
       options: {
         extensions: ['css', 'html', 'js', 'svg'],
