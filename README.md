@@ -1,10 +1,10 @@
 <section id="introduction">
   <img align="right" alt="GIF" width="42%" src="https://github.com/mastrero/assets/raw/main/mastrero/Myself.gif" />
-  <h2>
+  <p>
     <> <b> Hello world
       <img width="25px" src="https://github.com/mastrero/assets/raw/main/mastrero/Hello_World.gif" alt="world"> </b>
     <\>
-  </h2>
+  </p>
   <h2> I'm <a href="https://arunkumar.design/">ArunKumar Nadikattu</a>.</h2>
 </section>
 
@@ -20,10 +20,10 @@
 ![](https://visitor-badge.glitch.me/badge?page_id=mastrero.mastrero)
 
 - 👨🏻‍💻 I’m currently working on taking my skills to the peeks.
-- 🤼 I’m looking to collaborate on any Open Source Projects.
-- 💁🏻‍♂️ [Need to reach me ...](#contact-me) 👇🏻
-- ❓ [Ask me about anything, I would like to answer.](#contact-me)
-- 📃 My [resume](https://drive.google.com/file/d/14YWHGoDYXgaBtXKaOw2ylG8Hp-vJxSmy/view). Hire me 🥰
+- 👬 I’m looking to make contributions in any Open Source Projects.
+- 🏃 [Need to reach me ...](#contact-me) 👇🏻
+- 🙇🏻‍♂️ [Ask me about anything, I would like to answer.](#contact-me)
+- 📂 My [resume](https://drive.google.com/file/d/14YWHGoDYXgaBtXKaOw2ylG8Hp-vJxSmy/view). Hire me 😍
 
 <section id="skills">
 <h3><b>I use</b></h3>
@@ -63,8 +63,9 @@
 <hr />
 
 <section id="contact-me">
-  <h3><b>Contact Me 💬</b></h3>
-  <b>I'm always interested in meeting new & interesting people like you, so feel free to reach out to me.</b>
+  <h3><b>Contact Me 🙋🏻‍♂️</b></h3>
+  <b>I'm always interested in meeting awesome people like you, so feel free to reach out to me.</b>
+  <br>
   <div>
     <a href="mailto:arunaiekhil@gmail.com" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/gmail_dark.png" width="35" alt="mail" ></a>&nbsp;
     <a href="https://github.com/mastrero" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/github.svg" width="35" alt="github" ></a>&nbsp;
