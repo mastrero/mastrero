@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { Input, Submit } from '../ui/Input';
 import Loader from '../ui/Loader';
-import emailjs from 'emailjs-com';
 
 /* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
 /* eslint jsx-a11y/click-events-have-key-events: 0 */
@@ -132,15 +131,21 @@ export default function ContactModal({ show, close }) {
       if (Object.values(formData).every(data => data) && /\S+@\S+\.\S+/.test(formData['email'])) {
         e.preventDefault();
         setSubmitting(true);
-        await emailjs
-          .send(
-            process.env.GATSBY_EMAILJS_SERVICE,
-            process.env.GATSBY_EMAILJS_TEMPLATE,
-            formData,
-            process.env.GATSBY_EMAILJS_USER_ID
-          )
-          .then(() => setSubmitted(true))
-          .catch(e => console.log(e));
+        const form = e.target;
+        const data = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", `https://formspree.io/f/${process.env.GATSBY_FORMSPREE_IO_SLUG}`);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            form.reset();
+            setSubmitted(true)
+          } else {
+            alert("Something Happened")
+          }
+        };
+        xhr.send(data);
         setSubmitting(false);
       }
     },
@@ -150,16 +155,16 @@ export default function ContactModal({ show, close }) {
     <ModelWrapper className={show ? 'show' : ''}>
       <Model className={show ? 'show' : ''}>
         {submitting && <Loader />}
-        <p>{!submitted ? 'Reach me out ... 🐱‍🏍' : 'CHEERS 🍻 !!'}</p>
+        <p>{!submitted ? 'Reach out to me ... 🕊' : 'CHEERS 🍻 !!'}</p>
         <ModelHeading onClick={close}>
           <CloseModel />
         </ModelHeading>
         {!submitted ? (
-          <form name="Get_In_Touch">
+          <form onSubmit={handlers.submitForm}>
             <Input value={formData['name']} update={handlers.updateValue} type="text" label="Name" name="name" />
             <Input value={formData['email']} update={handlers.updateValue} type="email" label="Email ID" name="email" />
             <Input value={formData['purpose']} update={handlers.updateValue} type="text" label="Purpose" name="purpose" />
-            <Submit text="Submit" click={handlers.submitForm} />
+            <Submit text="Submit" />
             <span>* - required</span>
           </form>
         ) : (

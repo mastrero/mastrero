@@ -75,7 +75,7 @@ Input.propTypes = {
 
 Submit.defaultProps = {
   text: 'Submit',
-  click: () => alert('Submit'),
+  click: () => {},
 };
 
 Submit.propTypes = {
