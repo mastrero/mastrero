@@ -5,7 +5,7 @@ import CoffeeSvg from '../../images/misc/coffee.svg';
 const Wrapper = styled.div`
   width: 100%;
   height: 80px;
-  background: var(--about-bg);
+  background-color: transparent;
   display: flex;
   justify-content: center;
   padding-top: 30px;
@@ -25,8 +25,11 @@ const CoffeeButton = styled.button`
     position: absolute;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
     content: '';
-    background: var(--pink);
+    background: ${props => props.theme.colors.red};
     transition: clip-path 0.35s;
+  }
+  span {
+    color: ${props => props.theme.colors.font};
   }
   span:nth-child(1) {
     font-size: 1rem;

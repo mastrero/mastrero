@@ -1,9 +1,20 @@
-import React, { Fragment, useRef } from 'react';
-import Components from '../components/index';
-import ScrollToTop from '../components/ui/Scrolltotop';
+import React from 'react';
+import styled, { ThemeProvider } from 'styled-components';
+import { GlobalStyle, theme } from '../layouts/Global';
 import { links } from '../utils';
-import SEO from '../components/sub/SEO';
-import { GlobalStyle, Main, Section } from '../styles/Global';
+import SEO from '../utils/SEO';
+import Components from '../components/index';
+import MainLayout from '../layouts/_main';
+
+const Section = styled.section`
+  height: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    margin-left: 35px;
+  }
+`;
 
 const Sections = () => {
   return links.map(link => {
@@ -17,17 +28,13 @@ const Sections = () => {
 };
 
 export default function Home() {
-  const mainRef = useRef(null);
-
   return (
-    <Fragment>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <SEO title="Portfolio" />
-      <Components.Sidebar mainRef={mainRef} />
-      <ScrollToTop mainRef={mainRef} />
-      <Main ref={mainRef}>
+      <MainLayout>
         <Sections />
-      </Main>
-    </Fragment>
+      </MainLayout>
+    </ThemeProvider>
   );
 }

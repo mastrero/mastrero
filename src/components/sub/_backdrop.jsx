@@ -5,7 +5,7 @@ const Backdrop = styled.div`
   z-index: 25;
   width: 100vw;
   height: 100vh;
-  background-color: #57575726;
+  background-color: #75747447;
 `;
 
 export default Backdrop;

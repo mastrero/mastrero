@@ -1,8 +1,8 @@
 import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
-import { Input, Submit } from '../ui/Input';
-import Loader from '../ui/Loader';
+import { Input, Submit } from './form_elements/_input';
+import Loader from './_loader';
 
 /* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
 /* eslint jsx-a11y/click-events-have-key-events: 0 */

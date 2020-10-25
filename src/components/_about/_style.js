@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { MediaQueryMobile } from './Global';
 
 // Styles
 export const TopBar = styled.div`
@@ -17,23 +16,25 @@ export const Logo = styled.img`
 export const Banner = styled.div`
   height: 100%;
   padding-top: 50px;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  background-color: var(--about-bg);
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-end; */
+  background-color: transparent;
 `;
 
 export const Content = styled.div`
-  width: 55%;
-  padding: 10px;
-  ${() => MediaQueryMobile('width: 100%;')}
+  width: 88%;
+  margin: 0 auto;
+  padding: 15px;
+  ${props => props.theme.bp.mb('width: 90%;')}
+  color: ${props => props.theme.colors.font};
   > h1 {
     margin: 1.25rem 0;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 36px;
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   > h2 {
     font-weight: 600;
@@ -50,6 +51,7 @@ export const Content = styled.div`
 export const Links = styled.div`
   padding: 5px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 `;
 

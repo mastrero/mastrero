@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react';
-import { Wrapper, Flex, Box } from '../styles/Skills';
+import React from 'react';
+import { Wrapper, Flex, Box } from './_style';
 import PropTypes from 'prop-types';
 
-import * as Images from '../images';
-import { know, tools, learning } from '../utils';
+import * as Images from '../../images';
+import { know, tools, learning } from '../../utils';
 
 export default function Skills() {
   return (
-    <Fragment>
+    <>
       <Wrapper>
         <h1>What I know</h1>
         <PouplateItems items={know} />
@@ -20,7 +20,7 @@ export default function Skills() {
         <h1>Tools I use</h1>
         <PouplateItems items={tools} />
       </Wrapper>
-    </Fragment>
+    </>
   );
 }
 

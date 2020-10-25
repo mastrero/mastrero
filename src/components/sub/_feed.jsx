@@ -5,22 +5,19 @@ import PropTypes from 'prop-types';
 const defaultAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
-  20% {
-    opacity: 0.5;    
+  33% {
+    opacity: 0.5;
   }
-  30% {
-    opacity: 0.8;
-  }
-  30.1%, 70% {
+  65% {
     transform: translateY(0px);
     opacity: 1;
   }
-  70.1% {
+  70% {
     opacity: 0.5;
   }
-  95%, 100% {
+  100% {
     opacity: 0;
     transform: translateY(20px);
   }
@@ -44,6 +41,9 @@ const selectAnimation = css`
 const Wrapper = styled.span`
   position: relative;
   margin: 0px;
+  span {
+    color: ${props => props.theme.colors.font};
+  }
   > span.prefix {
     animation: ${prefixAnimation} 1500ms ease-in 1;
   }

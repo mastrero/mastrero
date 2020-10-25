@@ -1,12 +1,6 @@
 // LINKS
 export const links = ['About', 'Skills', 'Projects', 'Contact', 'Resume'];
 
-// ABOUT
-export const aboutContent = {
-  name: "I'm ArunKumar N",
-  description: 'An enthusiastic web developer, focused on the design and development of digital products.',
-};
-
 // SKILLS
 export const know = [
   'HTML 5',

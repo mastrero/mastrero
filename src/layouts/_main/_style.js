@@ -1,10 +1,9 @@
 import styled, { keyframes, css } from 'styled-components';
-import { MediaQueryMobile, MediaQueryDesktop } from './Global';
 
 const anim_navItems = keyframes`
   0% {
     opacity: 0;
-    transform: scale(0.8) translateX(-10%);
+    transform: scale(0.3) translateX(-10%);
   }
   100% {
     opacity: 1;
@@ -12,33 +11,40 @@ const anim_navItems = keyframes`
   }
 `;
 
+export const Main = styled.main`
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  transition: all 0.3s linear 0s;
+`;
+
 export const Container = styled.aside`
-  min-width: 228px;
-  height: 100vh;
-  background-color: var(--white);
-  color: var(--black);
+  min-width: 230px;
+  height: 100%;
+  color: ${props => props.theme.colors.font};
+  background-color: ${props => (props.show ? props.theme.colors.bg : `transparent`)};
   box-shadow: -1px 0px 20px 0px rgb(160 160 160 / 62%);
   transition: all 0.3s linear;
   z-index: 30;
   top: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   ${props =>
-    MediaQueryMobile(
+    props.theme.bp.mb(
       `transform: ${props.show ? `translateX(0%)` : `translateX(-85%)`};
       transition: all 0.3s linear;
-      box-shadow: 2px -1px 2px 0px rgb(160 160 160 / 62%);
+      box-shadow: 0px 0px 7px 0px rgb(208 208 208 / 86%);
       position: fixed;`
     )}
 `;
 
 export const NavList = styled.nav`
-  padding: 0 5px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  ${() => MediaQueryMobile('padding-right: 0;')}
-  ${props => {
-    return props.links.map(
-      (l, i) => css`
+  ${props =>
+    props.links.map(
+      (_, i) => css`
         > a:nth-child(${i + 1}) {
           animation-name: ${anim_navItems};
           animation-duration: 0.55s;
@@ -47,24 +53,23 @@ export const NavList = styled.nav`
           animation-fill-mode: both;
         }
       `
-    );
-  }}
+    )}
 `;
 
 export const NavListItem = styled.a`
-  color: var(--black);
+  background-color: transparent;
+  color: ${props => props.theme.colors.font};
   margin-top: 10px;
-  padding: 5px 5px;
+  padding: 5px 5px 5px 35px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 
-  &:hover,
   &.active {
-    background: #989898;
-    color: ${props => props.theme.bg};
+    background: ${props => props.theme.colors.font};
+    color: ${props => props.theme.colors.bg};
     border-radius: 0;
   }
   > span {
@@ -82,7 +87,7 @@ export const NavMenu = styled.a`
   &:before {
     width: 25px;
     height: 3px;
-    background-color: var(--black);
+    background-color: ${props => props.theme.colors.font};
     transition: all 0.3s linear;
     z-index: 35;
     cursor: pointer;
@@ -117,5 +122,5 @@ export const NavMenu = styled.a`
 			transform: rotate(90deg);
 			transform-origin: 32% 5px;
 		}`}
-  ${() => MediaQueryDesktop(`display: none;`)}
+  ${props => props.theme.bp.lg(`display: none;`)}
 `;

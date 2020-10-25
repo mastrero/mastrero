@@ -1,8 +1,7 @@
-import About from './About';
-import Contact from './Contact';
-import Projects from './Projects';
-import Resume from './Resume';
-import Skills from './Skills';
-import Sidebar from './Sidebar';
+import About from './_about';
+import Contact from './_contact';
+import Projects from './_projects';
+import Resume from './_resume';
+import Skills from './_skills';
 
-export default { About, Contact, Projects, Resume, Skills, Sidebar };
+export default { About, Contact, Projects, Resume, Skills };
