@@ -1,5 +1,4 @@
-const path = require(`path`);
-
+require('dotenv').config();
 exports.onCreateWebpackConfig = ({ getConfig, stage, actions }) => {
   //* DISABLE SOURCEMAP FILES ON PRODUCTION
   if (stage === `build-javascript` || getConfig().mode === 'production') {
@@ -11,12 +10,13 @@ exports.onCreateWebpackConfig = ({ getConfig, stage, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        '~components': path.resolve(__dirname, 'src/components'),
-        '~sub': path.resolve(__dirname, 'src/components/sub'),
-        '~layout': path.resolve(__dirname, 'src/layouts'),
-        '~images': path.resolve(__dirname, 'src/images'),
-        '~utils': path.resolve(__dirname, 'src/utils'),
+        '@components': `${__dirname}/src/components`,
+        '@contents': `${__dirname}/src/contents`,
+        '@images': `${__dirname}/src/images`,
+        '@layouts': `${__dirname}/src/layouts`,
+        '@utils': `${__dirname}/src/utils`,
       },
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
   });
   //* HOT-LOADER FOR REACT-16.6+

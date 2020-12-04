@@ -36,7 +36,6 @@
   <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/javascript.png">
   <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/react.png">
   <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/nodejs.png">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/styled_components.png">
   <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/postgresql.webp">
 
 - **Tools :**
