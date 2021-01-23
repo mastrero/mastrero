@@ -31,9 +31,9 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
     <NextSeo
       title="ArunKumar Nadikattu ~ Mastrero"
       description="Hello! I am ArunKumar Nadikattu, a enthusiastic web developer, focused on the design and development of digital products."
-      canonical="https://mastrero.me/"
+      canonical="https://mastrero.vercel.app/"
       openGraph={{
-        url: 'https://mastrero.me/',
+        url: 'https://mastrero.vercel.app/',
         title: 'ArunKumar Nadikattu ~ Mastrero',
         description:
           'Hello! I am ArunKumar Nadikattu, a enthusiastic web developer, focused on the design and development of digital products.',

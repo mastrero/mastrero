@@ -82,8 +82,7 @@ const Contact = (): JSX.Element => {
         />
         <Button
           w="100%"
-          bg="secondary"
-          color="white"
+          className="Themable__Button"
           borderRadius="0"
           _hover={{ opacity: 0.8 }}
           _active={{ opacity: 0.8 }}

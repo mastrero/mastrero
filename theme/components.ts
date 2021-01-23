@@ -1,5 +1,3 @@
-import { colors } from './colors';
-
 export const components = {
   Button: {
     variants: {
@@ -8,20 +6,16 @@ export const components = {
         minW: 'unset',
         fontSize: '14px',
         h: '100%',
-        fontWeight: '600',
+        fontWeight: '700',
         borderRadius: 'none',
-        color: '#000000',
         _hover: {
           textDecor: 'none',
-        },
-        _focus: {
-          boxShadow: '0 0 0 0px rgb(32 62 212 / 60%)',
         },
         _active: {
           bg: 'none',
         },
         '&[aria-selected=true], &[data-selected=true]': {
-          color: `${colors['secondary']} !important`,
+          color: 'var(--btn-bg)!important',
         },
       },
     },

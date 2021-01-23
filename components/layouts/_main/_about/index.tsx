@@ -1,27 +1,44 @@
 import * as React from 'react';
-import { Box, Flex, Icon, IconButton } from '@chakra-ui/react';
+import { Box, Flex, Icon, IconButton, useColorMode } from '@chakra-ui/react';
 import { motion, AnimatePresence } from 'framer-motion';
 // * ICON
 import { IoLogoLinkedin } from 'react-icons/io';
 import { HiMail } from 'react-icons/hi';
 import { GrGithub } from 'react-icons/gr';
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 const About = (): JSX.Element => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Box
+    <Flex
       as="header"
-      pl={['5px', null, '20px']}
-      pt={['5px', null, '10px']}
+      flexDir="column"
+      p={['5px 0 0 10px', '5px 10% 0 10%', '50px 0 0 20px']}
       gridArea="1 / 1 / 2 / 2"
-      mx="auto"
       borderRightWidth={['none', null, '2px']}
       borderBottomWidth={['2px', null, '0px']}
       borderStyle="solid"
-      borderColor="#e1e4e8">
+      borderColor="inherit"
+      position="relative">
+      <IconButton
+        borderRadius="0"
+        variant="ghost"
+        right={['10px', '10%', '10px']}
+        top="3px"
+        aria-label="Theme Toggler"
+        position="absolute"
+        onClick={toggleColorMode}
+        icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
+      />
       <Box as={motion.span} fontFamily="monospace" fontSize={['1.2rem', null, '1.4rem']}>
         Hello, I am
       </Box>
-      <Box as={motion.h1} fontSize={['1.6rem', null, '2.28rem']} fontWeight="700">
+      <Box
+        as={motion.h1}
+        fontSize={['1.66rem', null, '2.28rem']}
+        fontWeight="700"
+        letterSpacing="1px"
+        className="Font__Raleway">
         ArunKumar Nadikattu.
       </Box>
       <AnimatePresence>
@@ -29,7 +46,6 @@ const About = (): JSX.Element => {
           as={motion.h2}
           animate={{ opacity: 1 }}
           initial={{ opacity: 1 }}
-          color="black"
           fontSize={['1.2rem', null, '1.2rem']}
           mb={['0px', null, '5px']}>
           <SplitText text="I design and develop stuff" />
@@ -42,6 +58,7 @@ const About = (): JSX.Element => {
         <IconButton
           as="a"
           href="https://www.linkedin.com/in/arunkumar-nadikattu/"
+          rel="noreferrer"
           target="_blank"
           title="LinkedIn"
           aria-label="LinkedIn"
@@ -52,6 +69,7 @@ const About = (): JSX.Element => {
         <IconButton
           as="a"
           href="https://github.com/mastrero"
+          rel="noreferrer"
           target="_blank"
           title="GitHub"
           aria-label="GitHub"
@@ -63,6 +81,7 @@ const About = (): JSX.Element => {
           as="a"
           target="_blank"
           href="mailto:arunaiekhil@gmail.com"
+          rel="noreferrer"
           title="Email"
           aria-label="Email"
           borderRadius="0"
@@ -70,7 +89,7 @@ const About = (): JSX.Element => {
           icon={<Icon w="1.78rem" h="1.78rem" as={HiMail} />}
         />
       </Flex>
-    </Box>
+    </Flex>
   );
 };
 
