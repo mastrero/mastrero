@@ -12,11 +12,13 @@
     "allowJs": true,
     "baseUrl": "src",
     "paths": {
-      "@components": ["components"],
-      "@contents": ["contents"],
-      "@images": ["images"],
-      "@layouts": ["layouts"],
-      "@utils": ["utils"]
+      "@components/*": ["components/*"],
+      "@layouts/*": ["components/layouts/*"],
+      "@tabs/*": ["components/tabs/*"],
+      "@images/*": ["images/*"],
+      "@theme/*": ["theme/*"],
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

@@ -11,9 +11,11 @@ exports.onCreateWebpackConfig = ({ getConfig, stage, actions }) => {
     resolve: {
       alias: {
         '@components': `${__dirname}/src/components`,
-        '@contents': `${__dirname}/src/contents`,
+        '@layouts': `${__dirname}/src/components/layouts`,
+        '@tabs': `${__dirname}/src/components/tabs`,
         '@images': `${__dirname}/src/images`,
-        '@layouts': `${__dirname}/src/layouts`,
+        '@theme': `${__dirname}/src/theme`,
+        '@types': `${__dirname}/src/types`,
         '@utils': `${__dirname}/src/utils`,
       },
       extensions: ['.js', '.jsx', '.ts', '.tsx'],

@@ -14,7 +14,7 @@ module.exports = {
       options: {
         sourceMap: false,
         autoLabel: 'dev-only',
-        labelFormat: `[name]`,
+        labelFormat: `[label]`,
         cssPropOptimization: true,
       },
     },

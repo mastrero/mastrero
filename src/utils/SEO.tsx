@@ -76,7 +76,10 @@ const SEO: FC<SeoProps> = ({ description = '', lang = '', meta = [], title = '' 
           data-ackee-domain-id="25cb2c6b-4344-45af-b102-9465d26130d3"></script>
       ) : null}
       <link rel="prerender" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800&display=swap" rel="stylesheet"></link>
     </Helmet>
   );
 };
