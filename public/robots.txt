@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://mastrero.vercel.app/sitemap.xml
+Host: https://mastrero.vercel.app
