@@ -45,7 +45,7 @@ const Contact = (): JSX.Element => {
   };
 
   return (
-    <Flex flexDir="column" justify="center" maxW={['100%', '88%', '500px']} mx={['auto', null, '10%']}>
+    <Flex flexDir="column" justify="center" maxW={['100%', '80%', '500px']} mx={['auto', null, '10%']}>
       <Box as="form" onSubmit={reachMeHandler}>
         <Input
           name="name"

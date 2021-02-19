@@ -12,6 +12,7 @@ export const styles = {
       '--scrollbar-bg': colorMode === 'light' ? '#eff1f5' : '#2b333b',
       '--scrollbar-tb': colorMode === 'light' ? '#5a6072' : '#9ca8b4',
       '--focusable': colorMode === 'light' ? '#203ed499' : '#4299e199',
+      '--hightlight': colorMode === 'light' ? '#001684' : '#99a1ff',
       '--btn-bg': colorMode === 'light' ? colors['secondary'] : colors['primary'],
     },
     body: {

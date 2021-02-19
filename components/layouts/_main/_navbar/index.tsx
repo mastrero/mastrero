@@ -7,8 +7,9 @@ interface INavbar {
 
 const Navbar = ({ tabs = [] }: INavbar): JSX.Element => (
   <TabList
+    id="navigation"
     as="nav"
-    w={['100vw', null, '100%']}
+    w={['100vw', null, '80%']}
     h="45px"
     overflowY="hidden"
     overflowX="auto"
@@ -16,7 +17,14 @@ const Navbar = ({ tabs = [] }: INavbar): JSX.Element => (
     position="sticky"
     top="0"
     zIndex="100">
-    <Flex w="100%" className="custom-scroll" justify="flex-start" alignItems="baseline" overflowY="auto" h="100%">
+    <Flex
+      w="100%"
+      className="custom-scroll"
+      justify={['flex-start', 'center']}
+      alignItems="baseline"
+      overflowY="auto"
+      bg="var(--bg)"
+      h="100%">
       {tabs.map(
         (tab: string, i: number): JSX.Element => (
           <Button key={tab + i} id={tab} as={Tab} variant="nav-tab" className="Font__Raleway" ml="10px">
