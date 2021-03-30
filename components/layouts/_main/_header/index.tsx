@@ -18,9 +18,7 @@ const Header = (): JSX.Element => {
           onClick={toggleColorMode}
           icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
         />
-        <Text as="span" fontSize="1.12rem" fontWeight="600">
-          AK
-        </Text>
+        <Box as="img" src="AK.svg" w="50px" h="auto" ml={['8px', 0]} />
         <Box>
           <IconButton
             as="a"
