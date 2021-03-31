@@ -6,22 +6,13 @@ import { BsPerson } from 'react-icons/bs';
 import { VscMailRead } from 'react-icons/vsc';
 import { FiPhoneCall, FiSend } from 'react-icons/fi';
 import { GrTextAlignFull } from 'react-icons/gr';
+import { IFormData } from 'types';
 
-interface IFormData {
-  [name: string]: string;
-}
-
-const Contact = (): JSX.Element => {
+const Contact: React.FC = (): JSX.Element => {
   const [formData, setFormData] = React.useState<IFormData>({});
-  // const [status, setStatus] = React.useState<any>({
-  //   isSubmitted: false,
-  //   isSubmitting: false,
-  // });
-
   const setFormDataHandler = (name: string, value: string): void => {
     setFormData((prev: IFormData) => ({ ...prev, [name]: value }));
   };
-
   const reachMeHandler = (e: React.BaseSyntheticEvent): void => {
     e.preventDefault();
     fetch(`${process.env.NEXT_PUBLIC_FORM_URL}`, {

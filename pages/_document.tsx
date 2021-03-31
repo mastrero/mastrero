@@ -1,6 +1,8 @@
+import * as React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { NextSeo } from 'next-seo';
 import {} from '@emotion/styled';
+
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -11,9 +13,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>ArunKumar Nadikattu | Mastrero</title>
-          <link rel="icon" href="/favicon.png" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" key="vieport" />
           <NextSeo
             title="ArunKumar Nadikattu | Mastrero"
             description="Hello 👋, I'm ArunKumar Nadikattu. a passionate Full Stack Web Developer who loves coding, designing and building tech products and tools."

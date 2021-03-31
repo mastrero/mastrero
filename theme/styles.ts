@@ -7,7 +7,7 @@ export const styles = {
       '--font': colorMode === 'light' ? colors.dark : colors.white,
       '--font-reverse': colorMode === 'light' ? colors.white : colors.dark,
       '--focus-font': colorMode === 'light' ? colors['secondary'] : colors['primary'],
-      '--bg': colorMode === 'light' ? '#efefef' : colors.dark,
+      '--bg': colorMode === 'light' ? colors.white : colors.dark,
       '--border-color': colorMode === 'light' ? '#e2e8f0' : '#464646',
       '--scrollbar-bg': colorMode === 'light' ? '#eff1f5' : '#2b333b',
       '--scrollbar-tb': colorMode === 'light' ? '#5a6072' : '#9ca8b4',
@@ -55,6 +55,7 @@ export const styles = {
     },
     '.Individual__Post a:hover .highlight': {
       color: 'var(--focus-font)',
+      opacity: 1,
     },
     'input:focus, textarea:focus': {
       borderColor: 'var(--btn-bg) !important',

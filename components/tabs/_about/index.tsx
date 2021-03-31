@@ -3,7 +3,7 @@ import { Box, Text } from '@chakra-ui/react';
 import Highlight from './_highlight';
 import GetInTouch from './_getInTouch';
 
-const About = (): JSX.Element => {
+const About: React.FC = (): JSX.Element => {
   return (
     <Box w={['100%', '80%', '60%']} textAlign="left">
       <Text as="span" fontFamily="monospace" fontWeight="600" fontSize={['1.28rem', null, '1.6rem']}>

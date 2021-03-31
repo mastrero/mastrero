@@ -1,11 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import { Flex, IconButton, Icon, Box, useColorMode, Text } from '@chakra-ui/react';
 import { IoLogoLinkedin } from 'react-icons/io';
 import { HiMail } from 'react-icons/hi';
 import { GrGithub } from 'react-icons/gr';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
-const Header = (): JSX.Element => {
+const Header: React.FC = (): JSX.Element => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -18,7 +18,7 @@ const Header = (): JSX.Element => {
           onClick={toggleColorMode}
           icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
         />
-        <Box as="img" src="AK.svg" w="50px" h="auto" ml={['8px', 0]} />
+        <Box as="img" src="AK.svg" w="50px" h="auto" />
         <Box>
           <IconButton
             as="a"

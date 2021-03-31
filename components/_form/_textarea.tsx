@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Box, Textarea, InputGroup, InputRightElement, InputLeftElement, Icon } from '@chakra-ui/react';
-import { ITextArea } from './_types';
+import { ITextArea } from 'types';
 
-const TextArea = ({
+const TextArea: React.FC<ITextArea> = ({
   placeholder = '',
   size = 'md',
   variant = 'outline',
@@ -15,7 +15,7 @@ const TextArea = ({
   value = '',
   update = () => {},
   id,
-}: ITextArea): JSX.Element => {
+}): JSX.Element => {
   return (
     <InputGroup my="5px" id={id}>
       {icon && <InputLeftElement children={<Icon as={icon} />} />}

@@ -1,3 +1,27 @@
+export interface IBannerImage {
+  url?: string;
+  title?: string;
+}
+export interface Isys {
+  id: string;
+  firstPublishedAt: string;
+  publishedAt: string;
+}
+export interface IPost {
+  key: any;
+  title: string;
+  slug: string;
+  subtitle: string;
+  description: string;
+  bannerImage: IBannerImage;
+  tags: Array<string | number>;
+  sys: Isys;
+}
+
+export interface IFormData {
+  [name: string]: string;
+}
+
 export interface ITextArea {
   placeholder?: string;
   size?: 'xs' | 'sm' | 'md' | 'xl';

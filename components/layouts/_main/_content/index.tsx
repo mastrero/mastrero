@@ -2,11 +2,10 @@ import * as React from 'react';
 import { TabPanels, Tabs, TabPanel, SlideFade } from '@chakra-ui/react';
 import Navbar from '../_navbar';
 import Header from '../_header';
-interface IContent {
-  [name: string]: JSX.Element | Element | React.FC | any;
-}
 
-const Content = ({ content }: IContent): JSX.Element => {
+const Content: React.FC<{ [name: string]: JSX.Element | Element | React.FC | any }> = ({
+  content,
+}): JSX.Element => {
   return (
     <Tabs isLazy align="center">
       <Header />

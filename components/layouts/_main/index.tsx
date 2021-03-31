@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { Box } from '@chakra-ui/react';
 import Content from './_content';
 
-import { About as A, Posts, Work, Contact } from '../../tabs';
+import { About, Posts, Work, Contact } from '../../tabs';
 
-const MainLayout = (): JSX.Element => {
+const MainLayout: React.FC = (): JSX.Element => {
   const tab_content = {
-    'About 👨': A,
+    'About 👨': About,
     'Posts ✍': Posts,
     'Work 👨‍💻': Work,
     'Contact 🐱‍🏍': Contact,

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import { Box, Text, Button, Flex, ChakraProvider } from '@chakra-ui/react';
 
-const NotFoundPage = () => (
+const NotFoundPage: React.FC = (): JSX.Element => (
   <ChakraProvider>
     <Box w="100%" h="100vh" p={['10px 0 100px 0', null, '80px 0']} bg="white">
       <Flex
@@ -33,7 +33,7 @@ const NotFoundPage = () => (
             Go to Home
           </Button>
         </Box>
-        <Box w="300px" as={Image} src="/404.gif" alt="404" loading="priority" />
+        <Box w="300px" as={Image} src="/404.gif" alt="404" loading="eager" />
       </Flex>
     </Box>
   </ChakraProvider>

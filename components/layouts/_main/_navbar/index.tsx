@@ -1,11 +1,7 @@
 import * as React from 'react';
 import { Flex, TabList, Tab, Button } from '@chakra-ui/react';
 
-interface INavbar {
-  tabs: string[];
-}
-
-const Navbar = ({ tabs = [] }: INavbar): JSX.Element => (
+const Navbar: React.FC<{ tabs: Array<string> }> = ({ tabs = [] }): JSX.Element => (
   <TabList
     id="navigation"
     as="nav"

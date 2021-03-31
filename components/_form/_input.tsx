@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Box, Input as In, InputGroup, InputRightElement, InputLeftElement, Icon } from '@chakra-ui/react';
-import { IInput } from './_types';
+import { IInput } from 'types';
 
-const Input = ({
+const Input: React.FC<IInput> = ({
   placeholder = '',
   size = 'md',
   variant = 'outline',
@@ -14,7 +14,7 @@ const Input = ({
   value = '',
   update = () => {},
   id,
-}: IInput): JSX.Element => {
+}): JSX.Element => {
   return (
     <InputGroup my="5px" id={id}>
       {icon && <InputLeftElement children={<Icon as={icon} />} />}
