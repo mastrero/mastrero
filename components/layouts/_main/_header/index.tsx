@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Flex, IconButton, Icon, Box, useColorMode, Text } from '@chakra-ui/react';
+import { Flex, IconButton, Icon, Box, useColorMode } from '@chakra-ui/react';
 import { IoLogoLinkedin } from 'react-icons/io';
 import { HiMail } from 'react-icons/hi';
 import { GrGithub } from 'react-icons/gr';

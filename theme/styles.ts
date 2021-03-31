@@ -16,8 +16,8 @@ export const styles = {
       '--btn-bg': colorMode === 'light' ? colors['secondary'] : colors['primary'],
     },
     body: {
-      color: 'var(--font)',
-      bg: 'var(--bg)',
+      color: 'var(--font) !important',
+      bg: 'var(--bg) !important',
       fontFamily: `'Public Sans', -apple-system, 'Segoe UI', sans-serif`,
       position: 'relative',
       overflowX: 'hidden',
