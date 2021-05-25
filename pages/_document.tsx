@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { NextSeo } from 'next-seo';
-import {} from '@emotion/styled';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
