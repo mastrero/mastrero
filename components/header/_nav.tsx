@@ -27,4 +27,6 @@ const Nav: React.FC = React.memo(
   )
 );
 
+Nav.displayName = 'Navigation';
+
 export default Nav;

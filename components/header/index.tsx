@@ -11,7 +11,7 @@ const Header = () => {
   React.useEffect(() => {
     if (!showShowModal) onClose();
     return () => {};
-  }, [showShowModal]);
+  }, [showShowModal, onClose]);
 
   return (
     <Box as="header" p={['20px 0 5px']} w="100%">

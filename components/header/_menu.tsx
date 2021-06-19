@@ -39,6 +39,8 @@ const Menu: React.FC<MenuProps> = React.memo(
   )
 );
 
+Menu.displayName = 'Header_Menu';
+
 type MenuProps = {
   isOpen: boolean;
   onClose: () => void;
