@@ -8,7 +8,7 @@ const Header = () => {
   const { isOpen, onClose, onToggle } = useDisclosure();
   const [showShowModal] = useMediaQuery('(max-width: 767px)');
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     if (!showShowModal) onClose();
     return () => {};
   }, [showShowModal]);

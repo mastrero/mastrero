@@ -4,7 +4,7 @@ import * as React from 'react';
 const NotFoundPage: React.FC = (): JSX.Element => {
   return (
     <>
-    {/*   <Header />
+      {/*   <Header />
     //   <Box
     //     w="100%"
     //     h="max-content"
