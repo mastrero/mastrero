@@ -19,11 +19,11 @@ export default extendTheme({
         cursor: 'pointer',
       },
       'button:focus-visible': {
-        outline: '2px dashed rgb(240 72 72 / 77%) !important',
+        outline: '2px dashed #000000 !important',
         boxShadow: 'none !important',
       },
       'button:focus:not(:focus-visible)': {
-        boxShadow: '0 0 0 3px rgba(240, 72, 72, 0.6) !important',
+        boxShadow: '0 0 0 2px #000000 !important',
       },
       '.plain-btn-hover': {
         _hover: {

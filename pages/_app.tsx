@@ -10,6 +10,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }): JSX.Element => (
       <title>ArunKumar Nadikattu | Mastrero</title>
       <link rel="icon" href="/favicon.png" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" key="vieport" />
+      <meta charSet="UTF-8"></meta>
     </Head>
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
