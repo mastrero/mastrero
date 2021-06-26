@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { Drawer, DrawerBody, DrawerFooter, DrawerOverlay, DrawerContent, Flex, Box, IconButton, Icon } from '@chakra-ui/react';
+import { Drawer, DrawerBody, DrawerFooter, DrawerOverlay, DrawerContent, Flex, Box, Icon } from '@chakra-ui/react';
 import { nav_links } from './_utils';
-import { FaLinkedinIn, FaGithub, FaTwitter } from 'react-icons/fa'
-import { AiOutlineMail } from 'react-icons/ai'
+import SocialLinkComponent from './_socialLinks';
 
 const Menu: React.FC<MenuProps> = React.memo(
   ({ isOpen, onClose }): JSX.Element => (
@@ -11,36 +10,38 @@ const Menu: React.FC<MenuProps> = React.memo(
       <DrawerContent bg="brand.bg">
         <DrawerBody p="6.5rem 5rem 0 0">
           <Flex as="nav" flexDir="column" alignItems="flex-end">
-            {nav_links.map(({ name, url, emoji }: { name: string; url: string, emoji: any }) => (
+            {nav_links.map(({ name, url, emoji, icon }: { name: string; url: string; emoji: any; icon: any }) => (
               <Box
-              as="a"
-              my="15px"
-              href={url}
-              key={name}
-              className="remove-tap-highlight"
-              fontFamily="monospace"
-              fontSize="1.3rem"
-              onClick={() => {
-                setTimeout(() => {
-                  console.log('Hell');
-                  onClose();
-                }, 300);
-              }}>
+                as="a"
+                my="15px"
+                href={url}
+                key={name}
+                className="remove-tap-highlight"
+                fontFamily="monospace"
+                fontSize="1.3rem"
+                _hover={{
+                  bg: 'linear-gradient(0deg, rgba(255,0,53,1) 10%, rgba(0,0,0,0) 10%)',
+                }}
+                onClick={() => {
+                  setTimeout(() => {
+                    console.log('Hell');
+                    onClose();
+                  }, 300);
+                }}>
                 {name}
-                <Box as="span" color="brand.primary" pl="5px">{emoji}</Box>
+                <Box as="span" color="brand.primary" pl="5px">
+                  {emoji}
+                </Box>
               </Box>
             ))}
           </Flex>
         </DrawerBody>
         <DrawerFooter>
-            <Box as="strong">@mastrero</Box>
-            <Box flexGrow={1} />
-            <IconButton ml="5px" variant="ghost" as="a" target="blank" href="https://www.linkedin.com/in/arunkumar-nadikattu/" aria-label="LinkedIn: @ArunKumar Nadikattu" icon={<Icon as={FaLinkedinIn} />} />
-            <IconButton ml="5px" variant="ghost" as="a" target="blank" href="https://github.com/mastrero" aria-label="GitHub: @mastrero" icon={<Icon as={FaGithub} />} />
-            <IconButton ml="5px" variant="ghost" as="a" target="blank" href="https://twitter.com/iKnowToCode" aria-label="Twitter: @iKnowToCode" icon={<Icon as={FaTwitter} />} />
-            <IconButton ml="5px" variant="ghost" as="a" target="blank" href="mailto:arunaiekhil@gmail.com" aria-label="Email: arunaiekhil@gmail.com" icon={<Icon as={AiOutlineMail} />} />
+          <Box as="strong">@mastrero</Box>
+          <Box flexGrow={1} />
+          <SocialLinkComponent />
         </DrawerFooter>
-      </DrawerContent> 
+      </DrawerContent>
     </Drawer>
   )
 );
