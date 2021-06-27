@@ -11,7 +11,7 @@ const Name: React.FC<GridAreaType> = React.memo(
       <Text
         as="h1"
         className="font-OpenSans"
-        fontSize="4xl"
+        fontSize={['8vw', '4xl']}
         w="fit-content"
         fontWeight="600"
         position="relative"

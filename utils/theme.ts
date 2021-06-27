@@ -44,17 +44,17 @@ export default extendTheme({
           bg: 'transparent !important',
         },
       },
-      '::-webkit-scrollbar': {
-        width: '8px',
-      },
-      '::-webkit-scrollbar-thumb': {
-        background: '#2940D3',
-        borderRadius: '10px 0 0 0',
-      },
-      '::-webkit-scrollbar-track': {
-        bg: '#a2a2a2',
-        borderRadius: '10px 0 0 0',
-      },
+      // '::-webkit-scrollbar': {
+      //   width: '8px',
+      // },
+      // '::-webkit-scrollbar-thumb': {
+      //   background: '#2940D3',
+      //   borderRadius: '10px 0 0 0',
+      // },
+      // '::-webkit-scrollbar-track': {
+      //   bg: '#a2a2a2',
+      //   borderRadius: '10px 0 0 0',
+      // },
       '.remove-tap-highlight': {
         WebkitTapHighlightColor: 'transparent !important',
       },

@@ -17,10 +17,10 @@ const Description: React.FC<GridAreaType> = React.memo(
       <Text as="p">
         Currently, I'm working{` `}
         <Text as="span" variant="hightlight">
-          @IBM
+          @IBM 😍
         </Text>
         {` `}
-        with an awesome team. Also outside of the work I side hustle on other presonal & freelance projects in free
+        with an awesome team. Also apart from the work I side hustle on other presonal & freelance projects in free
         time. 😜
       </Text>
       <br />
@@ -37,7 +37,7 @@ const Description: React.FC<GridAreaType> = React.memo(
         {SocialLinks.map(
           ({ name, url }: SocialLinksProps): JSX.Element => (
             <Link variant="hashtag" href={url} target="blank" rel="noopener" key={name}>
-              {`#${name.split(':')[0]}`}
+              {`#${name.split(':')[0]} `}
             </Link>
           )
         )}
