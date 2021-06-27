@@ -14,6 +14,13 @@ export default extendTheme({
       body: {
         bg: colors.brand.bg,
         color: colors.brand.font,
+        h: '100vh',
+      },
+      '#__next': {
+        display: 'grid',
+        gridTemplateColumns: '1fr',
+        gridTemplateRows: '60px 1fr',
+        h: '100%',
       },
       'a, button': {
         cursor: 'pointer',

@@ -22,7 +22,7 @@ const Header = () => {
   }, [showShowModal, onClose]);
 
   return (
-    <Box as="header" p={['10px 0 5px']} w="100%" position="fixed" borderBottom="2px solid black">
+    <Box as="header" pt="10px" w="100%" gridArea="1 / 1 / 2 / 2" bg="white">
       <Flex justifyContent="space-between" alignItems="center" w={['94%', null, '88%']} h="50px" m="0 auto">
         <Box as="img" src="AK.svg" alt="ArunKumar Nadikattu" h="100%" w={['50px', null, '60px']} />
         <IconButton
