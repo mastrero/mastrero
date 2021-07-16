@@ -4,11 +4,18 @@ const colors = {
   brand: {
     bg: '#ffffff',
     font: '#000000',
+    primary: '#2940D3',
   },
+};
+
+const fonts = {
+  OpenSans: 'Open Sans',
+  monospace: 'monospace',
 };
 
 export default extendTheme({
   colors,
+  fonts,
   styles: {
     global: {
       body: {
@@ -25,28 +32,55 @@ export default extendTheme({
       'a, button': {
         cursor: 'pointer',
       },
-      'button:focus-visible': {
+      'button:focus-visible, a:focus-visible': {
         outline: '2px dashed #000000 !important',
         boxShadow: 'none !important',
       },
-      'button:focus:not(:focus-visible)': {
-        boxShadow: '0 0 0 2px #000000 !important',
+      'button:focus:not(:focus-visible), a:focus:not(:focus-visible)': {
+        boxShadow: 'none !important',
       },
       '.plain-btn-hover': {
         _hover: {
           bg: 'transparent !important',
         },
       },
+      // '::-webkit-scrollbar': {
+      //   width: '8px',
+      // },
+      // '::-webkit-scrollbar-thumb': {
+      //   background: '#2940D3',
+      //   borderRadius: '10px 0 0 0',
+      // },
+      // '::-webkit-scrollbar-track': {
+      //   bg: '#a2a2a2',
+      //   borderRadius: '10px 0 0 0',
+      // },
       '.remove-tap-highlight': {
         WebkitTapHighlightColor: 'transparent !important',
+      },
+      '.font-mono': {
+        fontFamily: 'monospace, sans-serif',
+      },
+      '.font-OpenSans': {
+        fontFamily: '"Open Sans", sans-serif',
       },
     },
   },
   components: {
-    Button: {
+    Text: {
       variants: {
-        'self-outline': {
-          border: '1px solid var(--chakra-colors-brand-primary)',
+        hightlight: {
+          color: colors.brand.primary,
+          fontWeight: 600,
+        },
+      },
+    },
+    Link: {
+      variants: {
+        hashtag: {
+          color: colors.brand.primary,
+          fontWeight: 600,
+          pr: '5px',
         },
       },
     },

@@ -2,36 +2,30 @@ import { FaLinkedinIn, FaGithub, FaTwitter, FaBlog } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
 import { IoIosPerson } from 'react-icons/io';
 import { RiContactsLine } from 'react-icons/ri';
-import { GrUserWorker, GrCloudComputer } from 'react-icons/gr';
+import { GrCloudComputer, GrInstagram } from 'react-icons/gr';
 
 export const nav_links = [
   {
     name: 'About',
-    url: '#about',
+    url: '/',
     emoji: '👨🏻',
     icon: IoIosPerson,
   },
   {
     name: 'Blog',
-    url: '#blog',
+    url: '/blog',
     emoji: '✍🏻',
     icon: FaBlog,
   },
   {
-    name: 'Work',
-    url: '#work',
-    emoji: '👨🏻‍💻',
-    icon: GrUserWorker,
-  },
-  {
     name: 'Projects',
-    url: '#projects',
-    emoji: '📄',
+    url: '/projects',
+    emoji: '👨🏻‍💻',
     icon: GrCloudComputer,
   },
   {
     name: 'Contact',
-    url: '#contact',
+    url: '%MODEL_CONTACT',
     emoji: '📞',
     icon: RiContactsLine,
   },
@@ -52,6 +46,11 @@ export const SocialLinks = [
     name: 'Twitter: @iKnowToCode',
     url: 'https://twitter.com/iKnowToCode',
     icon: FaTwitter,
+  },
+  {
+    name: 'Instagram: @_ak_diaries',
+    url: 'https://www.instagram.com/_ak_diaries',
+    icon: GrInstagram,
   },
   {
     name: 'Email: arunaiekhil@gmail.com',

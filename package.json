@@ -21,6 +21,7 @@
         "@chakra-ui/react": "^1.6.2",
         "@emotion/react": "11",
         "@emotion/styled": "11",
+        "@fontsource/noto-sans-jp": "^4.4.5",
         "framer-motion": "4",
         "next": "^11.0.0",
         "next-seo": "^4.17.0",
@@ -29,9 +30,9 @@
         "react-icons": "^4.2.0"
     },
     "devDependencies": {
-        "@types/node": "^14.14.22",
-        "@types/react": "^17.0.0",
-        "@types/react-dom": "^17.0.5",
+        "@types/node": "^16.3.2",
+        "@types/react": "^17.0.14",
+        "@types/react-dom": "^17.0.9",
         "eslint": "^7.29.0",
         "eslint-config-next": "^11.0.0",
         "prettier": "^2.2.1",

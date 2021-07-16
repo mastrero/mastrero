@@ -1,81 +1,69 @@
 <section id="introduction">
-  <img align="right" alt="GIF" width="42%" src="https://github.com/mastrero/assets/raw/main/mastrero/Myself.gif" />
-  <h2>
-    <> <b> Hello world
-      <img width="25px" src="https://github.com/mastrero/assets/raw/main/mastrero/Hello_World.gif" alt="world"> </b>
-    <\>
-  </h2>
-  <h2> I'm <a href="https://arunkumar.design/">ArunKumar Nadikattu</a>.</h2>
+  <img align="right" alt="GIF" width="45%" src="https://github.com/mastrero/assets/raw/main/mastrero/Myself.gif" />
+  <h1>Hello 👋🏻,<br>I'm 
+  <a style="font-size: 2rem;" href="https://mastero.vercel.app/">ArunKumar Nadikattu</a>
+  </h1>
 </section>
 
-<hr />
+<p>I'm a passionate, ambitious Full Stack Developer, who loves coding, designing and building tech products and tools. I'm a fan of JavaScript, Java and Python. 💖</p>
+<p>Currently, I'm working in <img src="https://www.freepngimg.com/thumb/logo/69877-logo-graphic-design-ibm-free-hq-image.png" height="25" alt="IBM" /> 😍 with an awesome team. Also apart from the work I side hustle on other presonal & freelance projects in free time. 😜</p>
+<p>If this sounds like someone you'd like to collaborate with then drop me a message, I'm always open for a conversation..🥰</p>
 
-<p>
-  <em>
-    A budding <b>Web Developer</b><img src="https://github.com/mastrero/assets/raw/main/mastrero/Developer.gif" width="30px"> and a <b>Design Enthusiast</b>&nbsp;<img src="https://raw.githubusercontent.com/mastrero/assets/main/mastrero/Designer.gif" width="36px">, currently obsessed with great things 🚀.
-  </em>  
-</p>
+Reach out to me 👇🏻
 
-[![Linkedin: arunkumar](https://img.shields.io/badge/-ArunKumar_Nadikattu-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/arun-kumar-n/)](https://www.linkedin.com/in/arun-kumar-n/)
-![](https://visitor-badge.glitch.me/badge?page_id=mastrero.mastrero)
-
-- 👨🏻‍💻 I’m currently working on taking my skills to the peeks.
-- 🤼 I’m looking to collaborate on any Open Source Projects.
-- 💁🏻‍♂️ [Need to reach me ...](#contact-me) 👇🏻
-- ❓ [Ask me about anything, I would like to answer.](#contact-me)
-- 📃 My [resume](https://drive.google.com/file/d/14YWHGoDYXgaBtXKaOw2ylG8Hp-vJxSmy/view). Hire me 🥰
-
-<section id="skills">
-<h3><b>I use</b></h3>
-
-<!-- ![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5) -->
-
-- **Languages :**
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/html.png">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/css.png">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/javascript.png">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/react.png">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/nodejs.png">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/postgresql.webp">
-
-- **Tools :**
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/git.png">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/github.png">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/vscode.png">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/adobexd.png">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/firebase.jpg">
-  <img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/netlify.png">
-
-**I'm Currently Learning :**
-<img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/typescript.webp">
-<img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/graphql.png">
-<img height="25" src="https://github.com/mastrero/assets/raw/main/mastrero/languages_tools/django.png">
-
-</section>
+[#LinkedIn](https://www.linkedin.com/in/arunkumar-nadikattu/)
+[#Twitter](https://twitter.com/ArrKuuu)
+[#Instagram](https://www.instagram.com/_ak_diaries)
+[#Github](https://github.com/mastrero)
+[#Email](mailto:arunaiekhil@gmail.com)
 
 ---
 
-<h3 id="stats"><b>Stats 📈</b></h3>
+![](https://img.shields.io/badge/PR's-welcome-blue)
+![](https://visitor-badge.glitch.me/badge?page_id=mastrero.mastrero)
 
-<img src="https://github-readme-stats.vercel.app/api?username=mastrero&show_icons=true" alt="stats" >
+![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-<hr />
+![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![](https://img.shields.io/badge/Chakra--UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white)
+![](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-<section id="contact-me">
-  <h3><b>Contact Me 💬</b></h3>
-  <b>I'm always interested in meeting new & interesting people like you, so feel free to reach out to me.</b>
-  <div>
-    <a href="mailto:arunaiekhil@gmail.com" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/gmail_dark.png" width="35" alt="mail" ></a>&nbsp;
-    <a href="https://github.com/mastrero" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/github.svg" width="35" alt="github" ></a>&nbsp;
-    <a href="https://www.linkedin.com/in/arun-kumar-n/" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/linkedin_dark.png" width="35" alt="linkedin" ></a>&nbsp;
-    <a href="https://discord.com/users/ArunKumar#1332" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/discord_dark.png" width="35" alt="discord" ></a>&nbsp;
-    <a href="https://arunkumar.design" target="_blank"><img src="https://github.com/mastrero/assets/raw/main/mastrero/contact/site.svg" width="35" alt="website" ></a>&nbsp;
-  </div>
-</section>
+![](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![](https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=whit)
+![](https://img.shields.io/badge/Notion-ffffff?style=for-the-badge&logo=notion&logoColor=black)
+![](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
-<hr />
+![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
+![](https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=white)
 
-<section id="conclusion">
-  <h3><b>Thank You - 🙏🏼</b></h3>
-  <p>💖 From <a href="https://github.com/mastrero">mastrero</a><p>
-</section>
+![](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)
+![](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)
+![](https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)
+
+---
+
+<div>
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=mastrero&show_icons=true&theme=radical&hide_border=true" alt="stats" >
+  <img height="160" src="https://github-readme-streak-stats.herokuapp.com/?user=mastrero&theme=radical&hide_border=true" alt="stats" >
+</div>
+
+<!-- <div style="text-align: center;">
+  <img height="240" src="https://activity-graph.herokuapp.com/graph?username=mastrero&theme=rogue&hide_border=true" alt="stats" >
+</div> -->
+
+---
+
+<p>💖 From ArunKumar Nadikattu a.k.a <a href="https://github.com/mastrero">mastrero</a><p>
